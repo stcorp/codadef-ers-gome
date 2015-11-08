@@ -1,0 +1,251 @@
+<?xml version="1.0"?>
+<cd:Record format="ascii" name="AGI_v1" last-modified="2010-08-25" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Description>Geolocation Information</cd:Description>
+  <cd:Field name="groundpixel_end">
+    <cd:Time timeformat="ascii_gome_datetime">
+      <cd:Description>UTC Date/Time of Ground Pixel End</cd:Description>
+      <cd:Mapping string="                        " value="nan"/>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="ls1">
+    <cd:AsciiLineSeparator>
+    </cd:AsciiLineSeparator>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="solar_angles_north">
+    <cd:Record>
+      <cd:Description>3 Solar Zenith and Azimuth Angles at Satellite w.r.t. North for the points {A, B, C}</cd:Description>
+      <cd:Field name="zenith_a">
+        <cd:Float>
+          <cd:Description>Solar Zenith Angle at Satellite w.r.t. North for the point A</cd:Description>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="azimuth_a">
+        <cd:Float>
+          <cd:Description>Solar Azimuth Angle at Satellite w.r.t. North for the point A</cd:Description>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="zenith_b">
+        <cd:Float>
+          <cd:Description>Solar Zenith Angle at Satellite w.r.t. North for the point B</cd:Description>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="azimuth_b">
+        <cd:Float>
+          <cd:Description>Solar Azimuth Angle at Satellite w.r.t. North for the point B</cd:Description>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="zenith_c">
+        <cd:Float>
+          <cd:Description>Solar Zenith Angle at Satellite w.r.t. North for the point C</cd:Description>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="azimuth_c">
+        <cd:Float>
+          <cd:Description>Solar Azimuth Angle at Satellite w.r.t. North for the point C</cd:Description>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="ls1">
+        <cd:AsciiLineSeparator>
+        </cd:AsciiLineSeparator>
+        <cd:Hidden/>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="los_north">
+    <cd:Record>
+      <cd:Description>3 Line-Of-Sight Zenith and Azimuth Angles at Satellite w.r.t. North for the points {A, B, C}</cd:Description>
+      <cd:Field name="zenith_a">
+        <cd:Float>
+          <cd:Description>Line-Of-Sight Zenith Angle at Satellite w.r.t. North for the point A</cd:Description>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="azimuth_a">
+        <cd:Float>
+          <cd:Description>Line-Of-Sight Azimuth Angle at Satellite w.r.t. North for the point A</cd:Description>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="zenith_b">
+        <cd:Float>
+          <cd:Description>Line-Of-Sight Zenith Angle at Satellite w.r.t. North for the point B</cd:Description>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="azimuth_b">
+        <cd:Float>
+          <cd:Description>Line-Of-Sight Azimuth Angle at Satellite w.r.t. North for the point B</cd:Description>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="zenith_c">
+        <cd:Float>
+          <cd:Description>Line-Of-Sight Zenith Angle at Satellite w.r.t. North for the point C</cd:Description>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="azimuth_c">
+        <cd:Float>
+          <cd:Description>Line-Of-Sight Azimuth Angle at Satellite w.r.t. North for the point C</cd:Description>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="ls1">
+        <cd:AsciiLineSeparator>
+        </cd:AsciiLineSeparator>
+        <cd:Hidden/>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="solar_angles_spacecraft">
+    <cd:Record>
+      <cd:Description>3 Solar Zenith and Azimuth Angles at Satellite w.r.t. Spacecraft for the points {A, B, C}</cd:Description>
+      <cd:Field name="zenith_a">
+        <cd:Float>
+          <cd:Description>Solar Zenith Angle at Satellite w.r.t. Spacecraft for the point A</cd:Description>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="azimuth_a">
+        <cd:Float>
+          <cd:Description>Solar Azimuth Angle at Satellite w.r.t. Spacecraft for the point A</cd:Description>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="zenith_b">
+        <cd:Float>
+          <cd:Description>Solar Zenith Angle at Satellite w.r.t. Spacecraft for the point B</cd:Description>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="azimuth_b">
+        <cd:Float>
+          <cd:Description>Solar Azimuth Angle at Satellite w.r.t. Spacecraft for the point B</cd:Description>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="zenith_c">
+        <cd:Float>
+          <cd:Description>Solar Zenith Angle at Satellite w.r.t. Spacecraft for the point C</cd:Description>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="azimuth_c">
+        <cd:Float>
+          <cd:Description>Solar Azimuth Angle at Satellite w.r.t. Spacecraft for the point C</cd:Description>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="ls1">
+        <cd:AsciiLineSeparator>
+        </cd:AsciiLineSeparator>
+        <cd:Hidden/>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="los_spacecraft">
+    <cd:Record>
+      <cd:Description>3 Line-Of-Sight Zenith and Azimuth Angles at Satellite w.r.t. Spacecraft for the points {A, B, C}</cd:Description>
+      <cd:Field name="zenith_a">
+        <cd:Float>
+          <cd:Description>Line-Of-Sight Zenith Angle at Satellite w.r.t. Spacecraft for the point A</cd:Description>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="azimuth_a">
+        <cd:Float>
+          <cd:Description>Line-Of-Sight Azimuth Angle at Satellite w.r.t. Spacecraft for the point A</cd:Description>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="zenith_b">
+        <cd:Float>
+          <cd:Description>Line-Of-Sight Zenith Angle at Satellite w.r.t. Spacecraft for the point B</cd:Description>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="azimuth_b">
+        <cd:Float>
+          <cd:Description>Line-Of-Sight Azimuth Angle at Satellite w.r.t. Spacecraft for the point B</cd:Description>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="zenith_c">
+        <cd:Float>
+          <cd:Description>Line-Of-Sight Zenith Angle at Satellite w.r.t. Spacecraft for the point C</cd:Description>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="azimuth_c">
+        <cd:Float>
+          <cd:Description>Line-Of-Sight Azimuth Angle at Satellite w.r.t. Spacecraft for the point C</cd:Description>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="ls1">
+        <cd:AsciiLineSeparator>
+        </cd:AsciiLineSeparator>
+        <cd:Hidden/>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="geo_height">
+    <cd:Float>
+      <cd:Description>Satellite Geodetic Height at point B</cd:Description>
+      <cd:Unit>km</cd:Unit>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="rad_curv">
+    <cd:Float>
+      <cd:Description>Earth Radius of Curvature at point B</cd:Description>
+      <cd:Unit>km</cd:Unit>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="sun_glint">
+    <cd:Integer>
+      <cd:Description>Possible Sun Glint (0: no; 1: yes)</cd:Description>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="ls2">
+    <cd:AsciiLineSeparator>
+    </cd:AsciiLineSeparator>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="coords">
+    <cd:Array>
+      <cd:Description>4 Corners and Center Coordinates at points {1,2,3,4,5} of Ground Pixel</cd:Description>
+      <cd:Dimension>5</cd:Dimension>
+      <cd:Record>
+        <cd:Field name="latitude">
+          <cd:Float>
+            <cd:Description>Latitude</cd:Description>
+            <cd:Unit>degrees_north</cd:Unit>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="longitude">
+          <cd:Float>
+            <cd:Description>Longitude</cd:Description>
+            <cd:Unit>degrees_east</cd:Unit>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Field>
+      </cd:Record>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="ls3">
+    <cd:AsciiLineSeparator>
+    </cd:AsciiLineSeparator>
+    <cd:Hidden/>
+  </cd:Field>
+</cd:Record>

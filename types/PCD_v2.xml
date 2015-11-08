@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="PCD_v2" last-modified="2009-02-17" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Field name="glr">
+    <cd:NamedType id="GLR1_v2"/>
+  </cd:Field>
+  <cd:Field name="cr">
+    <cd:NamedType id="CR1_v2"/>
+  </cd:Field>
+  <cd:Field name="dcns_fact">
+    <cd:Array>
+      <cd:Description>Dark Current and Noise Correction factors</cd:Description>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Float>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="ind_spc">
+    <cd:Integer>
+      <cd:Description>Index to Spectral Calibration Parameters</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="ind_leak">
+    <cd:Integer>
+      <cd:Description>Index to Leakage Correction Parameters</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="pol_par">
+    <cd:Array>
+      <cd:Description>Polarisation Parameters (7+1 fractional polarisation values including the appropriate wavelength value, error and Chi, the angle of the plane of polarisation)</cd:Description>
+      <cd:Dimension>25</cd:Dimension>
+      <cd:Float>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="ex_mph">
+    <cd:Array>
+      <cd:Description>Extraction of Level 0 Data MPH</cd:Description>
+      <cd:Dimension>34</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="ex_sph">
+    <cd:Array>
+      <cd:Description>Extraction of Level 0 Data SPH</cd:Description>
+      <cd:Dimension>22</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="ihr_sdp">
+    <cd:NamedType id="IHR"/>
+  </cd:Field>
+  <cd:Field name="ind_spb">
+    <cd:Array>
+      <cd:Description>Index to the 10 Spectral Bands (-1, if the integration time of this band was not completed)</cd:Description>
+      <cd:Dimension>10</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>int16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+</cd:Record>

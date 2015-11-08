@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<cd:Record format="ascii" name="GSI2" last-modified="2008-07-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Description>GDP Software Identifier</cd:Description>
+  <cd:Field name="separator_1">
+    <cd:AsciiLine>
+      <cd:Description>Separator 1</cd:Description>
+    </cd:AsciiLine>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="ls1">
+    <cd:AsciiLineSeparator>
+    </cd:AsciiLineSeparator>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="software_version">
+    <cd:AsciiLine>
+      <cd:Description>Software Version</cd:Description>
+    </cd:AsciiLine>
+  </cd:Field>
+  <cd:Field name="ls2">
+    <cd:AsciiLineSeparator>
+    </cd:AsciiLineSeparator>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="separator_2">
+    <cd:AsciiLine>
+      <cd:Description>Separator 2</cd:Description>
+    </cd:AsciiLine>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="ls3">
+    <cd:AsciiLineSeparator>
+    </cd:AsciiLineSeparator>
+    <cd:Hidden/>
+  </cd:Field>
+</cd:Record>

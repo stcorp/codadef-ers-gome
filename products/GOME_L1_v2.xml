@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<cd:ProductDefinition id="GOME_L1_v2" format="binary" last-modified="2009-02-17" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Record format="binary">
+    <cd:Field name="pir">
+      <cd:NamedType id="PIR"/>
+    </cd:Field>
+    <cd:Field name="fsr">
+      <cd:NamedType id="FSR1"/>
+    </cd:Field>
+    <cd:Field name="sph">
+      <cd:NamedType id="SPH1"/>
+    </cd:Field>
+    <cd:Field name="fcd">
+      <cd:NamedType id="FCD"/>
+    </cd:Field>
+    <cd:Field name="pcd">
+      <cd:Array>
+        <cd:Description>Pixel Specific Calibration Records</cd:Description>
+        <cd:Dimension><![CDATA[int(/fsr/n_rec)]]></cd:Dimension>
+        <cd:NamedType id="PCD_v2"/>
+      </cd:Array>
+    </cd:Field>
+    <cd:Field name="scr">
+      <cd:Array>
+        <cd:Description>Sun Specific Calibration Records</cd:Description>
+        <cd:Dimension><![CDATA[int(/fsr/n_sun)]]></cd:Dimension>
+        <cd:NamedType id="SCD"/>
+      </cd:Array>
+    </cd:Field>
+    <cd:Field name="mcr">
+      <cd:Array>
+        <cd:Description>Moon Specific Calibration Records</cd:Description>
+        <cd:Dimension><![CDATA[int(/fsr/n_moon)]]></cd:Dimension>
+        <cd:NamedType id="MCD"/>
+      </cd:Array>
+    </cd:Field>
+    <cd:Field name="bdr">
+      <cd:NamedType id="BDR"/>
+    </cd:Field>
+  </cd:Record>
+  <cd:ProductVariable name="band_length">
+    <cd:Dimension><![CDATA[10]]></cd:Dimension>
+    <cd:Init><![CDATA[for i = 0 to 9 do $band_length[i] = int(/fcd/bcr[i]/end_band) - int(/fcd/bcr[i]/start_band) + 1]]></cd:Init>
+  </cd:ProductVariable>
+  <cd:ProductVariable name="bdr_rec_size">
+    <cd:Dimension><![CDATA[10]]></cd:Dimension>
+    <cd:Init><![CDATA[for i = 0 to 9 do $bdr_rec_size[i] = $band_length[i] * 16 + 64]]></cd:Init>
+  </cd:ProductVariable>
+</cd:ProductDefinition>

@@ -1,0 +1,309 @@
+<?xml version="1.0"?>
+<cd:Record format="ascii" name="GLR2A" last-modified="2010-08-25" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Description>Geolocation Record in ASCII</cd:Description>
+  <cd:Field name="groundpixel_label">
+    <cd:Text>
+      <cd:Description>Ground-pixel label</cd:Description>
+      <cd:ByteSize>12</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="groundpixel_number">
+    <cd:Integer>
+      <cd:Description>Ground-pixel Number</cd:Description>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="subset_counter">
+    <cd:Integer>
+      <cd:Description>Subset Counter (0, 1, 2, or 3)</cd:Description>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="ls1">
+    <cd:AsciiLineSeparator>
+    </cd:AsciiLineSeparator>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="date_time">
+    <cd:Time timeformat="ascii_gome_datetime">
+      <cd:Description>UTC Date and Time of the ground pixel at end of integration time</cd:Description>
+      <cd:Mapping string="                        " value="nan"/>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="ls2">
+    <cd:AsciiLineSeparator>
+    </cd:AsciiLineSeparator>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="sza">
+    <cd:Record>
+      <cd:Description>3 Solar Zenith Angles at satellite for the points {A', B', C'}</cd:Description>
+      <cd:Field name="a">
+        <cd:Float>
+          <cd:Description>Solar Zenith Angle at satellite for the point A'</cd:Description>
+          <cd:Unit>degrees</cd:Unit>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="b">
+        <cd:Float>
+          <cd:Description>Solar Zenith Angle at satellite for the point B'</cd:Description>
+          <cd:Unit>degrees</cd:Unit>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="c">
+        <cd:Float>
+          <cd:Description>Solar Zenith Angle at satellite for the point C'</cd:Description>
+          <cd:Unit>degrees</cd:Unit>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="ws1">
+        <cd:AsciiWhiteSpace>
+        </cd:AsciiWhiteSpace>
+        <cd:Hidden/>
+      </cd:Field>
+      <cd:Field name="ls1">
+        <cd:AsciiLineSeparator>
+        </cd:AsciiLineSeparator>
+        <cd:Hidden/>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="line_sight">
+    <cd:Record>
+      <cd:Description>3 Line-Of-Sight Angles at satellite for the points {A', B', C'}</cd:Description>
+      <cd:Field name="a">
+        <cd:Float>
+          <cd:Description>Line-Of-Sight Angle at satellite for the point A'</cd:Description>
+          <cd:Unit>degrees</cd:Unit>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="b">
+        <cd:Float>
+          <cd:Description>Line-Of-Sight Angle at satellite for the point B'</cd:Description>
+          <cd:Unit>degrees</cd:Unit>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="c">
+        <cd:Float>
+          <cd:Description>Line-Of-Sight Angle at satellite for the point C'</cd:Description>
+          <cd:Unit>degrees</cd:Unit>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="ws1">
+        <cd:AsciiWhiteSpace>
+        </cd:AsciiWhiteSpace>
+        <cd:Hidden/>
+      </cd:Field>
+      <cd:Field name="ls1">
+        <cd:AsciiLineSeparator>
+        </cd:AsciiLineSeparator>
+        <cd:Hidden/>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="rel_azi">
+    <cd:Record>
+      <cd:Description>3 Relative Azimuth Angles at satellite for the points {A', B', C'}</cd:Description>
+      <cd:Field name="a">
+        <cd:Float>
+          <cd:Description>Relative Azimuth Angle at satellite for the point A'</cd:Description>
+          <cd:Unit>degrees</cd:Unit>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="b">
+        <cd:Float>
+          <cd:Description>Relative Azimuth Angle at satellite for the point B'</cd:Description>
+          <cd:Unit>degrees</cd:Unit>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="c">
+        <cd:Float>
+          <cd:Description>Relative Azimuth Angle at satellite for the point C'</cd:Description>
+          <cd:Unit>degrees</cd:Unit>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="ws1">
+        <cd:AsciiWhiteSpace>
+        </cd:AsciiWhiteSpace>
+        <cd:Hidden/>
+      </cd:Field>
+      <cd:Field name="ls1">
+        <cd:AsciiLineSeparator>
+        </cd:AsciiLineSeparator>
+        <cd:Hidden/>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="sza_toa">
+    <cd:Record>
+      <cd:Description>3 Solar Zenith Angles at TOA (Top-Of-Atmosphere) for the points {A', B', C'}</cd:Description>
+      <cd:Field name="a">
+        <cd:Float>
+          <cd:Description>Solar Zenith Angle at TOA (Top-Of-Atmosphere) for the point A'</cd:Description>
+          <cd:Unit>degrees</cd:Unit>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="b">
+        <cd:Float>
+          <cd:Description>Solar Zenith Angle at TOA (Top-Of-Atmosphere) for the point B'</cd:Description>
+          <cd:Unit>degrees</cd:Unit>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="c">
+        <cd:Float>
+          <cd:Description>Solar Zenith Angle at TOA (Top-Of-Atmosphere) for the point C'</cd:Description>
+          <cd:Unit>degrees</cd:Unit>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="ws1">
+        <cd:AsciiWhiteSpace>
+        </cd:AsciiWhiteSpace>
+        <cd:Hidden/>
+      </cd:Field>
+      <cd:Field name="ls1">
+        <cd:AsciiLineSeparator>
+        </cd:AsciiLineSeparator>
+        <cd:Hidden/>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="line_sight_toa">
+    <cd:Record>
+      <cd:Description>3 Line-Of-Sight Angles at TOA (Top-Of-Atmosphere) for the points {A', B', C'}</cd:Description>
+      <cd:Field name="a">
+        <cd:Float>
+          <cd:Description>Line-Of-Sight Angles at TOA (Top-Of-Atmosphere) for the point A'</cd:Description>
+          <cd:Unit>degrees</cd:Unit>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="b">
+        <cd:Float>
+          <cd:Description>Line-Of-Sight Angles at TOA (Top-Of-Atmosphere) for the point B'</cd:Description>
+          <cd:Unit>degrees</cd:Unit>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="c">
+        <cd:Float>
+          <cd:Description>Line-Of-Sight Angles at TOA (Top-Of-Atmosphere) for the point C'</cd:Description>
+          <cd:Unit>degrees</cd:Unit>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="ws1">
+        <cd:AsciiWhiteSpace>
+        </cd:AsciiWhiteSpace>
+        <cd:Hidden/>
+      </cd:Field>
+      <cd:Field name="ls1">
+        <cd:AsciiLineSeparator>
+        </cd:AsciiLineSeparator>
+        <cd:Hidden/>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="rel_azi_toa">
+    <cd:Record>
+      <cd:Description>3 Relative Azimuth Angles at TOA (Top-Of-Atmosphere) for the points {A', B', C'}</cd:Description>
+      <cd:Field name="a">
+        <cd:Float>
+          <cd:Description>Relative Azimuth Angle at TOA (Top-Of-Atmosphere) for the point A'</cd:Description>
+          <cd:Unit>degrees</cd:Unit>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="b">
+        <cd:Float>
+          <cd:Description>Relative Azimuth Angle at TOA (Top-Of-Atmosphere) for the point B'</cd:Description>
+          <cd:Unit>degrees</cd:Unit>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="c">
+        <cd:Float>
+          <cd:Description>Relative Azimuth Angle at TOA (Top-Of-Atmosphere) for the point C'</cd:Description>
+          <cd:Unit>degrees</cd:Unit>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="ws1">
+        <cd:AsciiWhiteSpace>
+        </cd:AsciiWhiteSpace>
+        <cd:Hidden/>
+      </cd:Field>
+      <cd:Field name="ls1">
+        <cd:AsciiLineSeparator>
+        </cd:AsciiLineSeparator>
+        <cd:Hidden/>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="sat_geodetic_height">
+    <cd:Float>
+      <cd:Description>Satellite Geodetic Height at point {B'}</cd:Description>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="earth_radius_curvature">
+    <cd:Float>
+      <cd:Description>Earth Radius of Curvature at point {B'}</cd:Description>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="ws1">
+    <cd:AsciiWhiteSpace>
+    </cd:AsciiWhiteSpace>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="ls3">
+    <cd:AsciiLineSeparator>
+    </cd:AsciiLineSeparator>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="coords">
+    <cd:Array>
+      <cd:Description>4 Corners and Center Coordinates as Points {1',2',3',4',5'} of Ground Pixel</cd:Description>
+      <cd:Dimension>5</cd:Dimension>
+      <cd:Record>
+        <cd:Field name="latitude">
+          <cd:Float>
+            <cd:Description>Latitude</cd:Description>
+            <cd:Unit>degrees_north</cd:Unit>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="longitude">
+          <cd:Float>
+            <cd:Description>Longitude</cd:Description>
+            <cd:Unit>degrees_east</cd:Unit>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Field>
+      </cd:Record>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="ws2">
+    <cd:AsciiWhiteSpace>
+    </cd:AsciiWhiteSpace>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="ls4">
+    <cd:AsciiLineSeparator>
+    </cd:AsciiLineSeparator>
+    <cd:Hidden/>
+  </cd:Field>
+</cd:Record>

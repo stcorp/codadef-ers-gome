@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<cd:Record format="ascii" name="EFS" last-modified="2008-07-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Description>Earthshine Format Specification</cd:Description>
+  <cd:Field name="description">
+    <cd:Text>
+      <cd:Description>Description</cd:Description>
+      <cd:FixedValue>Earthshine Spectrum </cd:FixedValue>
+      <cd:ByteSize>20</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="time_range_start">
+    <cd:Text>
+      <cd:Description>Time Range (start)</cd:Description>
+      <cd:ByteSize>12</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="ws1">
+    <cd:Text>
+      <cd:FixedValue> </cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="time_range_end">
+    <cd:Text>
+      <cd:Description>Time Range (end)</cd:Description>
+      <cd:ByteSize>12</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="num_ground">
+    <cd:Integer>
+      <cd:Description>Number of Ground Pixels</cd:Description>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="ls1">
+    <cd:AsciiLineSeparator>
+    </cd:AsciiLineSeparator>
+    <cd:Hidden/>
+  </cd:Field>
+</cd:Record>

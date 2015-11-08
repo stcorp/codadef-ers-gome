@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<cd:ProductDefinition id="GOME_L2_EXTRACTED_v1" format="ascii" last-modified="2008-07-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Record format="ascii">
+    <cd:Field name="gsi">
+      <cd:NamedType id="GSI2"/>
+    </cd:Field>
+    <cd:Field name="pir">
+      <cd:NamedType id="PIR"/>
+    </cd:Field>
+    <cd:Field name="ls1">
+      <cd:AsciiLineSeparator>
+      </cd:AsciiLineSeparator>
+      <cd:Hidden/>
+    </cd:Field>
+    <cd:Field name="num_ddr">
+      <cd:Integer>
+        <cd:Description>Number of DOAS Data Records</cd:Description>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Field>
+    <cd:Field name="ls2">
+      <cd:AsciiLineSeparator>
+      </cd:AsciiLineSeparator>
+      <cd:Hidden/>
+    </cd:Field>
+    <cd:Field name="sph">
+      <cd:NamedType id="SPH2A"/>
+    </cd:Field>
+    <cd:Field name="ddr">
+      <cd:Array>
+        <cd:Description>Ground pixel label</cd:Description>
+        <cd:Dimension><![CDATA[int(../num_ddr)]]></cd:Dimension>
+        <cd:NamedType id="DDRA_v1"/>
+      </cd:Array>
+    </cd:Field>
+  </cd:Record>
+</cd:ProductDefinition>

@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="REC" last-modified="2008-07-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:BitSize><![CDATA[$bdr_rec_size[index(..)]]]></cd:BitSize>
+  <cd:Field name="q_flag">
+    <cd:Integer>
+      <cd:Description>Quality Flags; Bit 8-7: Spectral check (0 = epsilon &lt; 0.02 px, 1 = 0.02 &lt; epsilon &lt; 0.05 px, 2 = epsilon &gt; 0.05 px), Bit 6-5: Saturated pixels, Bit 4-3: Hot pixels, Bit 2-1: Dead pixels; 0 = all pixels ok, 1 = less than 1% of pixels affected, 2 = more than 1% of pixels affected</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="polsen_ind">
+    <cd:Integer>
+      <cd:Description>Index to Polarisations Sensitivity Parameters</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="pscpr_ind">
+    <cd:Integer>
+      <cd:Description>Index to Pixel Specific Calibration Parameters Record (PCD)</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="time_int">
+    <cd:Integer>
+      <cd:Description>Integration Time</cd:Description>
+      <cd:Unit>3/32 s</cd:Unit>
+      <cd:Conversion numerator="3.000000" denominator="32.000000">
+        <cd:Unit>s</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="data_arr">
+    <cd:Array>
+      <cd:Description>Array Data Values</cd:Description>
+      <cd:Dimension><![CDATA[$band_length[index(../..)]]]></cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>BU</cd:Unit>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+</cd:Record>

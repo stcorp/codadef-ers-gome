@@ -1,0 +1,263 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="IRR_v2" last-modified="2010-08-25" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Description>Intermediate Results Record</cd:Description>
+  <cd:Field name="vcd">
+    <cd:Record>
+      <cd:Description>VCD (Vertical Column Density) data</cd:Description>
+      <cd:Field name="total">
+        <cd:Array>
+          <cd:Description>Total VCD to ground</cd:Description>
+          <cd:Dimension><![CDATA[int(/sph/n_mol)]]></cd:Dimension>
+          <cd:Float>
+            <cd:Unit>mol/cm2</cd:Unit>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>float</cd:NativeType>
+          </cd:Float>
+        </cd:Array>
+      </cd:Field>
+      <cd:Field name="error">
+        <cd:Array>
+          <cd:Description>Errors on VCDs above</cd:Description>
+          <cd:Dimension><![CDATA[int(/sph/n_mol)]]></cd:Dimension>
+          <cd:Float>
+            <cd:Unit>%</cd:Unit>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>float</cd:NativeType>
+          </cd:Float>
+        </cd:Array>
+      </cd:Field>
+      <cd:Field name="flag">
+        <cd:Integer>
+          <cd:Description>Flag indexing output</cd:Description>
+          <cd:BitSize>16</cd:BitSize>
+          <cd:NativeType>int16</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="doas">
+    <cd:Record>
+      <cd:Description>DOAS data</cd:Description>
+      <cd:Field name="slant">
+        <cd:Array>
+          <cd:Description>Slant Columns</cd:Description>
+          <cd:Dimension><![CDATA[int(/sph/n_mol)]]></cd:Dimension>
+          <cd:Float>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>float</cd:NativeType>
+          </cd:Float>
+        </cd:Array>
+      </cd:Field>
+      <cd:Field name="error">
+        <cd:Array>
+          <cd:Description>Errors on Slant Columns</cd:Description>
+          <cd:Dimension><![CDATA[int(/sph/n_mol)]]></cd:Dimension>
+          <cd:Float>
+            <cd:Unit>%</cd:Unit>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>float</cd:NativeType>
+          </cd:Float>
+        </cd:Array>
+      </cd:Field>
+      <cd:Field name="stats">
+        <cd:Array>
+          <cd:Description>RMS, Chi^2, Goodness-of-Fit, Iteration Number</cd:Description>
+          <cd:Dimension><![CDATA[int(/sph/n_win)]]></cd:Dimension>
+          <cd:Dimension>4</cd:Dimension>
+          <cd:Float>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>float</cd:NativeType>
+          </cd:Float>
+        </cd:Array>
+      </cd:Field>
+      <cd:Field name="temperature">
+        <cd:Float>
+          <cd:Description>Calculated Ozone Temperature</cd:Description>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>float</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="ring_factor">
+        <cd:Float>
+          <cd:Description>Ozone Ring Correction Factor</cd:Description>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>float</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="flag">
+        <cd:Integer>
+          <cd:Description>Flag indexing output</cd:Description>
+          <cd:BitSize>16</cd:BitSize>
+          <cd:NativeType>int16</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="amf">
+    <cd:Record>
+      <cd:Description>AMF (Air Mass Factor) data</cd:Description>
+      <cd:Field name="ground">
+        <cd:Array>
+          <cd:Description>AMF to ground for species (-1 for cloudy pixels)</cd:Description>
+          <cd:Dimension><![CDATA[int(/sph/n_mol)]]></cd:Dimension>
+          <cd:Float>
+            <cd:Unit/>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>float</cd:NativeType>
+          </cd:Float>
+        </cd:Array>
+      </cd:Field>
+      <cd:Field name="ground_error">
+        <cd:Array>
+          <cd:Description>Errors on AMF to ground above</cd:Description>
+          <cd:Dimension><![CDATA[int(/sph/n_mol)]]></cd:Dimension>
+          <cd:Float>
+            <cd:Unit>%</cd:Unit>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>float</cd:NativeType>
+          </cd:Float>
+        </cd:Array>
+      </cd:Field>
+      <cd:Field name="cld_top">
+        <cd:Array>
+          <cd:Description>AMF to cloud-top for species (-1 for clear sky)</cd:Description>
+          <cd:Dimension><![CDATA[int(/sph/n_mol)]]></cd:Dimension>
+          <cd:Float>
+            <cd:Unit/>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>float</cd:NativeType>
+          </cd:Float>
+        </cd:Array>
+      </cd:Field>
+      <cd:Field name="cld_top_error">
+        <cd:Array>
+          <cd:Description>Errors on AMF to cloud-top above</cd:Description>
+          <cd:Dimension><![CDATA[int(/sph/n_mol)]]></cd:Dimension>
+          <cd:Float>
+            <cd:Unit>%</cd:Unit>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>float</cd:NativeType>
+          </cd:Float>
+        </cd:Array>
+      </cd:Field>
+      <cd:Field name="flag">
+        <cd:Integer>
+          <cd:Description>Flag indexing output</cd:Description>
+          <cd:BitSize>16</cd:BitSize>
+          <cd:NativeType>int16</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="gvc">
+    <cd:Record>
+      <cd:Description>GVC data</cd:Description>
+      <cd:Field name="ghost">
+        <cd:Float>
+          <cd:Description>Ghost Vertical Column</cd:Description>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>float</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="ocra">
+    <cd:Record>
+      <cd:Description>OCRA data</cd:Description>
+      <cd:Field name="cloud_frac">
+        <cd:Float>
+          <cd:Description>Cloud Fraction</cd:Description>
+          <cd:Unit/>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>float</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="cloud_frac_error">
+        <cd:Float>
+          <cd:Description>Error on Cloud Fraction</cd:Description>
+          <cd:Unit>%</cd:Unit>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>float</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="rocinn">
+    <cd:Record>
+      <cd:Description>ROCINN data</cd:Description>
+      <cd:Field name="height">
+        <cd:Float>
+          <cd:Description>Cloud Top Height (-1 for clear sky)</cd:Description>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>float</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="height_error">
+        <cd:Float>
+          <cd:Description>Error on Cloud Top Height</cd:Description>
+          <cd:Unit>%</cd:Unit>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>float</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="pressure">
+        <cd:Float>
+          <cd:Description>Cloud Top Pressure (-1 for clear sky)</cd:Description>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>float</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="pressure_error">
+        <cd:Float>
+          <cd:Description>Error on Cloud Top Pressure</cd:Description>
+          <cd:Unit>%</cd:Unit>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>float</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="albedo">
+        <cd:Float>
+          <cd:Description>Cloud Top Albedo (-1 for clear sky)</cd:Description>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>float</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="albedo_error">
+        <cd:Float>
+          <cd:Description>Error on Cloud Top Albedo</cd:Description>
+          <cd:Unit>%</cd:Unit>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>float</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="surface_height">
+    <cd:Float>
+      <cd:Description>Surface Height</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="surface_pressure">
+    <cd:Float>
+      <cd:Description>Surface Pressure</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="surface_albedo">
+    <cd:Float>
+      <cd:Description>Surface Albedo</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="spare">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize><![CDATA[8 * (12 * int(/sph/n_win) - 8 * int(/sph/n_mol) + 80)]]></cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+</cd:Record>

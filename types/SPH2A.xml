@@ -1,0 +1,154 @@
+<?xml version="1.0"?>
+<cd:Record format="ascii" name="SPH2A" last-modified="2008-07-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Description>Solar Format Specification</cd:Description>
+  <cd:Field name="pir">
+    <cd:NamedType id="PIR"/>
+  </cd:Field>
+  <cd:Field name="ls1">
+    <cd:AsciiLineSeparator>
+    </cd:AsciiLineSeparator>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="sw_version">
+    <cd:Text>
+      <cd:Description>GDP Software Version, DOAS Level 1 to 2, (XX.XX)</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="ws1">
+    <cd:Text>
+      <cd:FixedValue> </cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="stat_par_version">
+    <cd:Text>
+      <cd:Description>GDP Static Parameter File Version. (XX.XX)</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="ws2">
+    <cd:Text>
+      <cd:FixedValue> </cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="format_version">
+    <cd:Text>
+      <cd:Description>GDP L2 Format Version, (XX.XX)</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="ls2">
+    <cd:AsciiLineSeparator>
+    </cd:AsciiLineSeparator>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="n_win">
+    <cd:Integer>
+      <cd:Description>Number of Fitting Windows</cd:Description>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="ls3">
+    <cd:AsciiLineSeparator>
+    </cd:AsciiLineSeparator>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="win_pair">
+    <cd:Array>
+      <cd:Description>Window Pair (start and end wavelength)</cd:Description>
+      <cd:Dimension><![CDATA[int(../n_win)]]></cd:Dimension>
+      <cd:Record>
+        <cd:Field name="start">
+          <cd:Float>
+            <cd:Description>Start Wavelength</cd:Description>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="end">
+          <cd:Float>
+            <cd:Description>End Wavelength</cd:Description>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Field>
+      </cd:Record>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="ws3">
+    <cd:AsciiWhiteSpace>
+    </cd:AsciiWhiteSpace>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="ls4">
+    <cd:AsciiLineSeparator>
+    </cd:AsciiLineSeparator>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="n_mol">
+    <cd:Integer>
+      <cd:Description>Number of Molecules</cd:Description>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="ls5">
+    <cd:AsciiLineSeparator>
+    </cd:AsciiLineSeparator>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="mol_pair">
+    <cd:Array>
+      <cd:Description>Molecule Pair (fitting window number and molecule name)</cd:Description>
+      <cd:Dimension><![CDATA[int(../n_mol)]]></cd:Dimension>
+      <cd:Record>
+        <cd:Field name="fitwin">
+          <cd:Integer>
+            <cd:Description>Fitting window index</cd:Description>
+            <cd:NativeType>int32</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="ws1">
+          <cd:AsciiWhiteSpace>
+          </cd:AsciiWhiteSpace>
+          <cd:Hidden/>
+        </cd:Field>
+        <cd:Field name="mol_name">
+          <cd:Text>
+            <cd:Description>Molecule name</cd:Description>
+            <cd:ByteSize>10</cd:ByteSize>
+            <cd:NativeType>string</cd:NativeType>
+          </cd:Text>
+        </cd:Field>
+        <cd:Field name="ws2">
+          <cd:AsciiWhiteSpace>
+          </cd:AsciiWhiteSpace>
+          <cd:Hidden/>
+        </cd:Field>
+      </cd:Record>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="ls6">
+    <cd:AsciiLineSeparator>
+    </cd:AsciiLineSeparator>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="atm_height">
+    <cd:Float>
+      <cd:Description>Atmosphere Height</cd:Description>
+      <cd:Unit>km</cd:Unit>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="ls7">
+    <cd:AsciiLineSeparator>
+    </cd:AsciiLineSeparator>
+    <cd:Hidden/>
+  </cd:Field>
+</cd:Record>

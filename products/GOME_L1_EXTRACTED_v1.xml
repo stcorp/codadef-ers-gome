@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<cd:ProductDefinition id="GOME_L1_EXTRACTED_v1" format="ascii" last-modified="2008-07-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Record format="ascii">
+    <cd:Field name="gsi">
+      <cd:NamedType id="GSI1_v1"/>
+    </cd:Field>
+    <cd:Field name="pir">
+      <cd:NamedType id="PIR"/>
+      <cd:Available><![CDATA[$pir_available != 0]]></cd:Available>
+    </cd:Field>
+    <cd:Field name="ls1">
+      <cd:AsciiLineSeparator>
+      </cd:AsciiLineSeparator>
+      <cd:Hidden/>
+      <cd:Available><![CDATA[$pir_available != 0]]></cd:Available>
+    </cd:Field>
+    <cd:Field name="ersi">
+      <cd:NamedType id="ERSI"/>
+      <cd:Available><![CDATA[$ersi_available != 0]]></cd:Available>
+    </cd:Field>
+    <cd:Field name="sfs">
+      <cd:NamedType id="SFS"/>
+      <cd:Available><![CDATA[$sfs_cdr_available != 0]]></cd:Available>
+    </cd:Field>
+    <cd:Field name="cdr">
+      <cd:Array>
+        <cd:Description>Channel Data Records</cd:Description>
+        <cd:Dimension>4</cd:Dimension>
+        <cd:NamedType id="CDR"/>
+      </cd:Array>
+      <cd:Available><![CDATA[$sfs_cdr_available != 0]]></cd:Available>
+    </cd:Field>
+    <cd:Field name="efs">
+      <cd:NamedType id="EFS"/>
+      <cd:Available><![CDATA[$efs_egp_available != 0]]></cd:Available>
+    </cd:Field>
+    <cd:Field name="egp">
+      <cd:Array>
+        <cd:Description>Earthshine Ground Pixels</cd:Description>
+        <cd:Dimension><![CDATA[$num_egp]]></cd:Dimension>
+        <cd:NamedType id="EGP_v1"/>
+      </cd:Array>
+      <cd:Available><![CDATA[$efs_egp_available != 0]]></cd:Available>
+    </cd:Field>
+    <cd:Field name="smfs">
+      <cd:NamedType id="SMFS"/>
+      <cd:Available><![CDATA[$smfs_smmd_available != 0]]></cd:Available>
+    </cd:Field>
+    <cd:Field name="smmd">
+      <cd:Array>
+        <cd:Description>Sun/Moon Measurement Data</cd:Description>
+        <cd:Dimension><![CDATA[$num_smmd]]></cd:Dimension>
+        <cd:NamedType id="SMMD"/>
+      </cd:Array>
+      <cd:Available><![CDATA[$smfs_smmd_available != 0]]></cd:Available>
+    </cd:Field>
+  </cd:Record>
+  <cd:ProductVariable name="pir_available">
+    <cd:Init><![CDATA[$pir_available = if((bytes(/pir, 5) == "E2GOM"), 1, 0)]]></cd:Init>
+  </cd:ProductVariable>
+  <cd:ProductVariable name="ersi_available">
+    <cd:Init><![CDATA[$ersi_available = if((bytes(/ersi, 15) == "ERS Information"), 1, 0)]]></cd:Init>
+  </cd:ProductVariable>
+  <cd:ProductVariable name="sfs_cdr_available">
+    <cd:Init><![CDATA[$sfs_cdr_available = if((bytes(/sfs, 14) == "Solar Spectrum"), 1, 0)]]></cd:Init>
+  </cd:ProductVariable>
+  <cd:ProductVariable name="efs_egp_available">
+    <cd:Init><![CDATA[$efs_egp_available = if((bytes(/efs, 19) == "Earthshine Spectrum"), 1, 0)]]></cd:Init>
+  </cd:ProductVariable>
+  <cd:ProductVariable name="smfs_smmd_available">
+    <cd:Init><![CDATA[$smfs_smmd_available = if((bytes(/efs, 17) == "Sunshine Spectrum" || bytes(/efs, 18) == "Moonshine Spectrum"), 1, 0)]]></cd:Init>
+  </cd:ProductVariable>
+  <cd:ProductVariable name="num_egp">
+    <cd:Init><![CDATA[$num_egp = int(/efs/num_ground)]]></cd:Init>
+  </cd:ProductVariable>
+  <cd:ProductVariable name="num_smmd">
+    <cd:Init><![CDATA[$num_smmd = int(/smfs/num_measurements)]]></cd:Init>
+  </cd:ProductVariable>
+  <cd:ProductVariable name="egp_pdr_available">
+    <cd:Init><![CDATA[$egp_pdr_available = if((bytes(/egp[0]/pdr, 3) == "PMD"), 1, 0)]]></cd:Init>
+  </cd:ProductVariable>
+</cd:ProductDefinition>

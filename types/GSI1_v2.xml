@@ -1,0 +1,103 @@
+<?xml version="1.0"?>
+<cd:Record format="ascii" name="GSI1_v2" last-modified="2009-02-17" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Description>GDP Software Identifier</cd:Description>
+  <cd:Field name="separator_1">
+    <cd:AsciiLine>
+      <cd:Description>Separator 1</cd:Description>
+    </cd:AsciiLine>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="ls1">
+    <cd:AsciiLineSeparator>
+    </cd:AsciiLineSeparator>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="software_version">
+    <cd:AsciiLine>
+      <cd:Description>Software Version</cd:Description>
+    </cd:AsciiLine>
+  </cd:Field>
+  <cd:Field name="ls2">
+    <cd:AsciiLineSeparator>
+    </cd:AsciiLineSeparator>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="format_version">
+    <cd:AsciiLine>
+      <cd:Description>Product Format Version</cd:Description>
+    </cd:AsciiLine>
+  </cd:Field>
+  <cd:Field name="ls3">
+    <cd:AsciiLineSeparator>
+    </cd:AsciiLineSeparator>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="separator_2">
+    <cd:AsciiLine>
+      <cd:Description>Separator 2</cd:Description>
+    </cd:AsciiLine>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="ls4">
+    <cd:AsciiLineSeparator>
+    </cd:AsciiLineSeparator>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="calibrations_applied_label">
+    <cd:Text>
+      <cd:FixedValue>Calibrations Applied</cd:FixedValue>
+      <cd:ByteSize>20</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="ls5">
+    <cd:AsciiLineSeparator>
+    </cd:AsciiLineSeparator>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="calibrations_applied">
+    <cd:Array>
+      <cd:Description>List of calibration parameters applied (in practice, this can be multiple lines up to the next 'Units' line)</cd:Description>
+      <cd:Dimension>10</cd:Dimension>
+      <cd:Array>
+        <cd:Dimension><![CDATA[if((bytes(:, 5) == "Units"), 0, 1)]]></cd:Dimension>
+        <cd:Record>
+          <cd:Field name="line">
+            <cd:AsciiLine>
+              <cd:Description>Calibration Parameters line</cd:Description>
+            </cd:AsciiLine>
+          </cd:Field>
+          <cd:Field name="ls1">
+            <cd:AsciiLineSeparator>
+            </cd:AsciiLineSeparator>
+            <cd:Hidden/>
+          </cd:Field>
+        </cd:Record>
+      </cd:Array>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="units_label">
+    <cd:Text>
+      <cd:FixedValue>Units</cd:FixedValue>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="ls6">
+    <cd:AsciiLineSeparator>
+    </cd:AsciiLineSeparator>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="units">
+    <cd:AsciiLine>
+      <cd:Description>Wavelength, irradiance, and Radiance units</cd:Description>
+    </cd:AsciiLine>
+  </cd:Field>
+  <cd:Field name="ls7">
+    <cd:AsciiLineSeparator>
+    </cd:AsciiLineSeparator>
+    <cd:Hidden/>
+  </cd:Field>
+</cd:Record>

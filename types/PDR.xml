@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<cd:Record format="ascii" name="PDR" last-modified="2008-07-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Description>PMD Data Values of the corresponding science data packet</cd:Description>
+  <cd:Field name="description">
+    <cd:Text>
+      <cd:Description>Description</cd:Description>
+      <cd:FixedValue>PMD </cd:FixedValue>
+      <cd:ByteSize>4</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="pmd1_flags">
+    <cd:Integer>
+      <cd:Description>PMD 1 Flags (0=Good; 1=Error)</cd:Description>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="pmd2_flags">
+    <cd:Integer>
+      <cd:Description>PMD 2 Flags (0=Good; 1=Error)</cd:Description>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="pmd3_flags">
+    <cd:Integer>
+      <cd:Description>PMD 3 Flags (0=Good; 1=Error)</cd:Description>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="ls1">
+    <cd:AsciiLineSeparator>
+    </cd:AsciiLineSeparator>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="pmd">
+    <cd:Array>
+      <cd:Description>PMD Values Data Records</cd:Description>
+      <cd:Dimension>16</cd:Dimension>
+      <cd:NamedType id="PVDR"/>
+    </cd:Array>
+  </cd:Field>
+</cd:Record>

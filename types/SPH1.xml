@@ -1,0 +1,213 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="SPH1" last-modified="2008-07-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Description>Specific Product Header</cd:Description>
+  <cd:Field name="n_ref">
+    <cd:Integer>
+      <cd:Description>Number of Input Data References</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="in_ref">
+    <cd:Array format="ascii">
+      <cd:Description>Input Data References</cd:Description>
+      <cd:Dimension><![CDATA[int(../n_ref)]]></cd:Dimension>
+      <cd:NamedType id="PIR"/>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="soft_ver">
+    <cd:Text format="ascii">
+      <cd:Description>GDP Software Version, Level 0 to 1 (XX.XX)</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="calib_ver">
+    <cd:Text format="ascii">
+      <cd:Description>Pre-flight calibration data version (XX.XX)</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="pr_frmv">
+    <cd:Integer>
+      <cd:Description>Product Format Version (XX)</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="orbit_num">
+    <cd:Integer>
+      <cd:Description>Orbit Number</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="datetime">
+    <cd:Time timeformat="binary_gome_datetime">
+      <cd:Description>UTC date and time</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="sat_count">
+    <cd:Integer>
+      <cd:Description>Satellite Binary Counter</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="sat_oper">
+    <cd:Integer>
+      <cd:Description>Satellite Binary Counter Period</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="pmd_entry">
+    <cd:Integer>
+      <cd:Description>GOME Science Package PMD entry point</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="sc_entry">
+    <cd:Integer>
+      <cd:Description>GOME Science Package Subset Counter entry point</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="is_entry">
+    <cd:Integer>
+      <cd:Description>GOME Science Package Integration Status entry point</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="pe_entry">
+    <cd:Integer>
+      <cd:Description>GOME Science Package Peltier entry point</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="s2_entry">
+    <cd:Integer>
+      <cd:Description>GOME Instrument Status_2 entry point</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="pmd_cfc">
+    <cd:Array>
+      <cd:Description>PMD's Conversion Factors</cd:Description>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Float>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="st_vect">
+    <cd:Record>
+      <cd:Description>Time and state vector</cd:Description>
+      <cd:Field name="datetime">
+        <cd:Time timeformat="binary_gome_datetime">
+          <cd:Description>Date, time</cd:Description>
+        </cd:Time>
+      </cd:Field>
+      <cd:Field name="orbit_n">
+        <cd:Integer>
+          <cd:Description>Orbit Number</cd:Description>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>int32</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="pos_vect">
+        <cd:Array>
+          <cd:Description>Position vector</cd:Description>
+          <cd:Dimension>3</cd:Dimension>
+          <cd:Float>
+            <cd:Unit>km</cd:Unit>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>float</cd:NativeType>
+          </cd:Float>
+        </cd:Array>
+      </cd:Field>
+      <cd:Field name="vel_vect">
+        <cd:Array>
+          <cd:Description>Velocity Vector</cd:Description>
+          <cd:Dimension>3</cd:Dimension>
+          <cd:Float>
+            <cd:Unit>km/s</cd:Unit>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>float</cd:NativeType>
+          </cd:Float>
+        </cd:Array>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="att_var">
+    <cd:Record>
+      <cd:Description>Attitude Variables</cd:Description>
+      <cd:Field name="att_comb">
+        <cd:Array>
+          <cd:Description>ATT combined effects (yaw around z, pitch around -x, roll around -y)</cd:Description>
+          <cd:Dimension>3</cd:Dimension>
+          <cd:Float>
+            <cd:Unit>degrees</cd:Unit>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Array>
+      </cd:Field>
+      <cd:Field name="datt_misp">
+        <cd:Array>
+          <cd:Description>DATT AOCS mispointing rate w.r.t. Nominal (yaw, pitch, roll)</cd:Description>
+          <cd:Dimension>3</cd:Dimension>
+          <cd:Float>
+            <cd:Unit>degrees/sec</cd:Unit>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Array>
+      </cd:Field>
+      <cd:Field name="iatt_flag">
+        <cd:Integer>
+          <cd:Description>IATT attitude flag (0 Nominal Yaw Steering Mode, 1 and 2 other pointing)</cd:Description>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>int32</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="pos_vect">
+        <cd:Integer>
+          <cd:Description>Status returned from GOME_INIT (0 Nominal, 1 and 2 No Convergence, 3 4 and 5 State Vector Outside Nominal ERS</cd:Description>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>int32</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="mjd_kpl">
+    <cd:Record>
+      <cd:Description>Modified Julian Day and Kepler State</cd:Description>
+      <cd:Field name="mjd">
+        <cd:Float>
+          <cd:Description>Modified Julian Day at True Ascending Node</cd:Description>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="kepl_state">
+        <cd:Array>
+          <cd:Description>Reference Mean Kepler State at True Ascending Node Crossing (Semi-major Axis (km), Excentricity, Inclination (deg), Argument of Perigee (deg), Mean anomaly (deg))</cd:Description>
+          <cd:Dimension>6</cd:Dimension>
+          <cd:Float>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Array>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+</cd:Record>

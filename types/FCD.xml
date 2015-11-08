@@ -1,0 +1,270 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="FCD" last-modified="2010-08-25" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Description>Fixed Calibration Data Record</cd:Description>
+  <cd:Field name="dcf">
+    <cd:Integer>
+      <cd:Description>Detector Confidence Flags; Bit 16-12: aways 0, Bit 11: PMD 3, Bit 10: PMD 2, Bit 9: PMD 1, Bit 8-7: Array 4, Bit 6-5: Array 3, Bit 4-3: Array 2, Bit 2-1: Array 1; 0 = detector ok, 1 = detector is dead, 2 = detector has dead pixels (arrays only)</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="bcr">
+    <cd:Array>
+      <cd:Description>Sensor Identifier</cd:Description>
+      <cd:Dimension>10</cd:Dimension>
+      <cd:NamedType id="BCR"/>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="reb_kdf">
+    <cd:Array>
+      <cd:Description>Relative Error Budget on KeyData Functions</cd:Description>
+      <cd:Dimension>4152</cd:Dimension>
+      <cd:Float>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="bdsd_fp">
+    <cd:Array>
+      <cd:Description>Bi-directional Scattering Distribution Function (BSDF) Parameters</cd:Description>
+      <cd:Dimension>11</cd:Dimension>
+      <cd:Float>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="ustray_lev">
+    <cd:Array>
+      <cd:Description>Uniform Straylight level</cd:Description>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Float>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="ghst">
+    <cd:Array>
+      <cd:Description>Symmetrical and asymmetrical ghost characteristics</cd:Description>
+      <cd:Dimension>8</cd:Dimension>
+      <cd:Record>
+        <cd:Field name="p1">
+          <cd:Integer>
+            <cd:Description>Ghost parameter 1</cd:Description>
+            <cd:BitSize>16</cd:BitSize>
+            <cd:NativeType>int16</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="p2">
+          <cd:Integer>
+            <cd:Description>Ghost parameter 2</cd:Description>
+            <cd:BitSize>16</cd:BitSize>
+            <cd:NativeType>int16</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="p3">
+          <cd:Float>
+            <cd:Description>Ghost Parameter 3</cd:Description>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>float</cd:NativeType>
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="p4">
+          <cd:Float>
+            <cd:Description>Ghost Parameter 4</cd:Description>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>float</cd:NativeType>
+          </cd:Float>
+        </cd:Field>
+      </cd:Record>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="tcw_wdt">
+    <cd:Integer>
+      <cd:Description>Width of the triangle convolution window used in straylight</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="sf_pnc">
+    <cd:Array>
+      <cd:Description>Scale factors for Peltier induced dark signal noise correction</cd:Description>
+      <cd:Dimension>5</cd:Dimension>
+      <cd:Float>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="n_pelt">
+    <cd:Integer>
+      <cd:Description>Number of Peltier filter coefficients used</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="fc_pnc">
+    <cd:Array>
+      <cd:Description>Filter coefficients for Peltier induced dark signal noise correction</cd:Description>
+      <cd:Dimension>100</cd:Dimension>
+      <cd:Float>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="n_leak">
+    <cd:Integer>
+      <cd:Description>Number of Leakage Correction Parameter Sets</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="noise_arr">
+    <cd:Array>
+      <cd:Description>Array Noise, 3 PMD Offsets, PMD Noise and Dark Current</cd:Description>
+      <cd:Dimension><![CDATA[int(../n_leak)]]></cd:Dimension>
+      <cd:Dimension>4101</cd:Dimension>
+      <cd:Float>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="p2p_gain">
+    <cd:Array>
+      <cd:Description>Pixel-to-Pixel Gain</cd:Description>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Dimension>1024</cd:Dimension>
+      <cd:Float>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="n_hot">
+    <cd:Integer>
+      <cd:Description>Number of Hot Pixel Occurences during this Orbit</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="hot_occ">
+    <cd:Array>
+      <cd:Description>Hot Pixel Occurrences: Record, Array, Pixel</cd:Description>
+      <cd:Dimension><![CDATA[int(../n_hot)]]></cd:Dimension>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Float>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="n_spec">
+    <cd:Integer>
+      <cd:Description>Number of Spectral Calibration Parameter Sets</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spec_par">
+    <cd:Array>
+      <cd:Description>Spectral Calibration Parameters (4th order polynomial) and Average Pixel Deviation for each channel</cd:Description>
+      <cd:Dimension><![CDATA[int(../n_spec)]]></cd:Dimension>
+      <cd:Dimension>24</cd:Dimension>
+      <cd:Float>
+        <cd:BitSize>64</cd:BitSize>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="ind_spec">
+    <cd:Integer>
+      <cd:Description>Index into Spectral Calibration Parameters for the following Calibration Parameters and Sun Specific Calibration Records</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="icp">
+    <cd:Array>
+      <cd:Description>Intensity Calibration Parameters (Interpolated Radiance Response Function)</cd:Description>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Dimension>1024</cd:Dimension>
+      <cd:Float>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="srs_mean">
+    <cd:Array>
+      <cd:Description>Sun Reference Spectrum (Mean Value)</cd:Description>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Dimension>1024</cd:Dimension>
+      <cd:Float>
+        <cd:Unit>BU</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="prec_srs">
+    <cd:Array>
+      <cd:Description>Relative Radiometric Precision of the Sun Reference Spectrum</cd:Description>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Dimension>1024</cd:Dimension>
+      <cd:Float>
+        <cd:Unit/>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="pmd_srs">
+    <cd:Array>
+      <cd:Description>PMD Mean Values of the Sun Reference Spectra</cd:Description>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Float>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="wl_pmd_srs">
+    <cd:Array>
+      <cd:Description>Wavelength of the PMD Mean Values of the Sun Reference Spectrum</cd:Description>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Float>
+        <cd:Unit>nm</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="datetime">
+    <cd:Time timeformat="binary_gome_datetime">
+      <cd:Description>Date, time of the Sun Reference Spectrum</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="n_ang">
+    <cd:Integer>
+      <cd:Description>Number of different scan mirror angles per channel for which the pre-flight calibration parameters 'Interpolated Polarisation Sensitivity' and 'Radiance Response' are calculated.</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="ip_sens">
+    <cd:Array>
+      <cd:Description>Interpolated Polarisation Sensitivity and Radiance Response</cd:Description>
+      <cd:Dimension><![CDATA[int(../n_ang)]]></cd:Dimension>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Dimension>1024</cd:Dimension>
+      <cd:Float>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+</cd:Record>

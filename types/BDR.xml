@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="BDR" last-modified="2008-07-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Description>Band Data Records</cd:Description>
+  <cd:Field name="band_1a">
+    <cd:Array>
+      <cd:Description>Band 1a Data Records</cd:Description>
+      <cd:Dimension><![CDATA[int(/fsr/n_b1a)]]></cd:Dimension>
+      <cd:NamedType id="REC"/>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="band_1b">
+    <cd:Array>
+      <cd:Description>Band 1b Data Records</cd:Description>
+      <cd:Dimension><![CDATA[int(/fsr/n_b1b)]]></cd:Dimension>
+      <cd:NamedType id="REC"/>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="band_2a">
+    <cd:Array>
+      <cd:Description>Band 2a Data Records</cd:Description>
+      <cd:Dimension><![CDATA[int(/fsr/n_b2a)]]></cd:Dimension>
+      <cd:NamedType id="REC"/>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="band_2b">
+    <cd:Array>
+      <cd:Description>Band 2b Data Records</cd:Description>
+      <cd:Dimension><![CDATA[int(/fsr/n_b2b)]]></cd:Dimension>
+      <cd:NamedType id="REC"/>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="band_3">
+    <cd:Array>
+      <cd:Description>Band 3 Data Records</cd:Description>
+      <cd:Dimension><![CDATA[int(/fsr/n_b3)]]></cd:Dimension>
+      <cd:NamedType id="REC"/>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="band_4">
+    <cd:Array>
+      <cd:Description>Band 4 Data Records</cd:Description>
+      <cd:Dimension><![CDATA[int(/fsr/n_b4)]]></cd:Dimension>
+      <cd:NamedType id="REC"/>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="blnd_pix">
+    <cd:Array>
+      <cd:Description>Blind Pixels</cd:Description>
+      <cd:Dimension><![CDATA[int(/fsr/n_blp)]]></cd:Dimension>
+      <cd:NamedType id="REC"/>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="strpix_1a">
+    <cd:Array>
+      <cd:Description>Straylight Pixels 1a Data Records</cd:Description>
+      <cd:Dimension><![CDATA[int(/fsr/n_st1a)]]></cd:Dimension>
+      <cd:NamedType id="REC"/>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="strpix_1b">
+    <cd:Array>
+      <cd:Description>Straylight Pixels 1b Data Records</cd:Description>
+      <cd:Dimension><![CDATA[int(/fsr/n_st1b)]]></cd:Dimension>
+      <cd:NamedType id="REC"/>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="strpix_2a">
+    <cd:Array>
+      <cd:Description>Straylight Pixels 2a Data Records</cd:Description>
+      <cd:Dimension><![CDATA[int(/fsr/n_st2a)]]></cd:Dimension>
+      <cd:NamedType id="REC"/>
+    </cd:Array>
+  </cd:Field>
+</cd:Record>

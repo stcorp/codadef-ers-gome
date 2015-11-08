@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="FSR2" last-modified="2008-07-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Description>File Structure Record</cd:Description>
+  <cd:Field name="n_rec">
+    <cd:Integer>
+      <cd:Description>Number of SPH2 Records</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="len_rec">
+    <cd:Integer>
+      <cd:Description>Length of SPH2 Record</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="n_ddr">
+    <cd:Integer>
+      <cd:Description>Number of DOAS Data Records</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="len_ddr">
+    <cd:Integer>
+      <cd:Description>Length of DOAS Data Record</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+</cd:Record>

@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<cd:Record format="ascii" name="EDR" last-modified="2010-08-25" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Field name="wavelength">
+    <cd:Float>
+      <cd:Description>Wavelength</cd:Description>
+      <cd:Unit>nm</cd:Unit>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="abs_radiance">
+    <cd:Float>
+      <cd:Description>Absolute Radiance Measurement</cd:Description>
+      <cd:Unit>photons/s.sr.cm2.nm</cd:Unit>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="abs_rad_err">
+    <cd:Float>
+      <cd:Description>Absolute Radiance Measurement Error</cd:Description>
+      <cd:Unit>photons/s.sr.cm2.nm</cd:Unit>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="rad_rel_resp_err">
+    <cd:Float>
+      <cd:Description>Radiance * Relative Response Error</cd:Description>
+      <cd:Unit/>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="flag">
+    <cd:Integer>
+      <cd:Description>Flag (0=Good; 1=Dead; 2=Hot; 3=Saturated; ...)</cd:Description>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="ls1">
+    <cd:AsciiLineSeparator>
+    </cd:AsciiLineSeparator>
+    <cd:Hidden/>
+  </cd:Field>
+</cd:Record>

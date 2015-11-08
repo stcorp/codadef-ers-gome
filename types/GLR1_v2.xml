@@ -1,0 +1,184 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="GLR1_v2" last-modified="2009-02-17" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Description>Geolocation Record</cd:Description>
+  <cd:Field name="datetime">
+    <cd:Time timeformat="binary_gome_datetime">
+      <cd:Description>Date, time of the ground pixel at end of integration time</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="sza_n">
+    <cd:Array>
+      <cd:Description>Solar Zenith and Azimuth Angles at Satellite w.r.t. North for the points {A, B, C}</cd:Description>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Record>
+        <cd:Field name="solarzn">
+          <cd:Float>
+            <cd:Description>Zenith Angle</cd:Description>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>float</cd:NativeType>
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="azmang">
+          <cd:Float>
+            <cd:Description>Azimuth Angle</cd:Description>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>float</cd:NativeType>
+          </cd:Float>
+        </cd:Field>
+      </cd:Record>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="line_sight_n">
+    <cd:Array>
+      <cd:Description>Line-of-Sight Zenith and Azimuth Angles at Satellite w.r.t. North for the points {A, B, C}</cd:Description>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Record>
+        <cd:Field name="linosght">
+          <cd:Float>
+            <cd:Description>Zenith Angle</cd:Description>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>float</cd:NativeType>
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="azmang">
+          <cd:Float>
+            <cd:Description>Azimuth Angle</cd:Description>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>float</cd:NativeType>
+          </cd:Float>
+        </cd:Field>
+      </cd:Record>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="sza_s">
+    <cd:Array>
+      <cd:Description>Solar Zenith and Azimuth Angles at Satellite w.r.t. Spacecraft for the points {A, B, C}</cd:Description>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Record>
+        <cd:Field name="solarzn">
+          <cd:Float>
+            <cd:Description>Zenith Angle</cd:Description>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>float</cd:NativeType>
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="azmang">
+          <cd:Float>
+            <cd:Description>Azimuth Angle</cd:Description>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>float</cd:NativeType>
+          </cd:Float>
+        </cd:Field>
+      </cd:Record>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="line_sight_s">
+    <cd:Array>
+      <cd:Description>Line-of-Sight Zenith and Azimuth Angles at Satellite w.r.t. Spacecraft for the points {A, B, C}</cd:Description>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Record>
+        <cd:Field name="linosght">
+          <cd:Float>
+            <cd:Description>Zenith Angle</cd:Description>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>float</cd:NativeType>
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="azmang">
+          <cd:Float>
+            <cd:Description>Azimuth Angle</cd:Description>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>float</cd:NativeType>
+          </cd:Float>
+        </cd:Field>
+      </cd:Record>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="sza_b">
+    <cd:Array>
+      <cd:Description>Solar Zenith and Azimuth Angles at Bottom of Atmosphere w.r.t. North for the points {A, B, C}</cd:Description>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Record>
+        <cd:Field name="solarzn">
+          <cd:Float>
+            <cd:Description>Zenith Angle</cd:Description>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>float</cd:NativeType>
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="azmang">
+          <cd:Float>
+            <cd:Description>Azimuth Angle</cd:Description>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>float</cd:NativeType>
+          </cd:Float>
+        </cd:Field>
+      </cd:Record>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="line_sight_b">
+    <cd:Array>
+      <cd:Description>Line-of-Sight Zenith and Azimuth Angles at Bottom of Atmosphere w.r.t. North for the points {A, B, C}</cd:Description>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Record>
+        <cd:Field name="linosght">
+          <cd:Float>
+            <cd:Description>Zenith Angle</cd:Description>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>float</cd:NativeType>
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="azmang">
+          <cd:Float>
+            <cd:Description>Azimuth Angle</cd:Description>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>float</cd:NativeType>
+          </cd:Float>
+        </cd:Field>
+      </cd:Record>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="sath">
+    <cd:Float>
+      <cd:Description>Satellite Geodetic Height at point {B}</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="ertr">
+    <cd:Float>
+      <cd:Description>Earth Radius of Curvature at point {B}</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="psl">
+    <cd:Integer>
+      <cd:Description>Possible Sun-glint (0=no, 1=yes)</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>int8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="corners">
+    <cd:Array>
+      <cd:Description>4 Corner and Center Coordinates (Latitude and Longitude) at points {1,2,3,4,5} of Ground Pixel</cd:Description>
+      <cd:Dimension>5</cd:Dimension>
+      <cd:Record>
+        <cd:Field name="lat">
+          <cd:Float>
+            <cd:Description>Latitude</cd:Description>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>float</cd:NativeType>
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="lon">
+          <cd:Float>
+            <cd:Description>Longitude</cd:Description>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>float</cd:NativeType>
+          </cd:Float>
+        </cd:Field>
+      </cd:Record>
+    </cd:Array>
+  </cd:Field>
+</cd:Record>

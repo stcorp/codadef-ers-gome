@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<cd:Record format="ascii" name="PVDR" last-modified="2010-08-25" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Field name="pmd1">
+    <cd:Float>
+      <cd:Description>PMD 1 Data Value Relative to Sun</cd:Description>
+      <cd:Unit/>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="pmd2">
+    <cd:Float>
+      <cd:Description>PMD 2 Data Value Relative to Sun</cd:Description>
+      <cd:Unit/>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="pmd3">
+    <cd:Float>
+      <cd:Description>PMD 3 Data Value Relative to Sun</cd:Description>
+      <cd:Unit/>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="ws1">
+    <cd:AsciiWhiteSpace>
+    </cd:AsciiWhiteSpace>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="ls1">
+    <cd:AsciiLineSeparator>
+    </cd:AsciiLineSeparator>
+    <cd:Hidden/>
+  </cd:Field>
+</cd:Record>

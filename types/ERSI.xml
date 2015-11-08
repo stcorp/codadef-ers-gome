@@ -1,0 +1,201 @@
+<?xml version="1.0"?>
+<cd:Record format="ascii" name="ERSI" last-modified="2010-08-25" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Description>ERS Orbit Propagator Information</cd:Description>
+  <cd:Field name="description">
+    <cd:Text>
+      <cd:Description>Description</cd:Description>
+      <cd:FixedValue>ERS Information</cd:FixedValue>
+      <cd:ByteSize>15</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="ls1">
+    <cd:AsciiLineSeparator>
+    </cd:AsciiLineSeparator>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="utc_days">
+    <cd:Integer>
+      <cd:Description>UTC days since 1.1.1950</cd:Description>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="utc_msec">
+    <cd:Integer>
+      <cd:Description>UTC ms since midnight</cd:Description>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="orbit_nr">
+    <cd:Integer>
+      <cd:Description>Orbit Number</cd:Description>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="pos_x">
+    <cd:Float>
+      <cd:Description>Position X</cd:Description>
+      <cd:Unit>km</cd:Unit>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="pos_y">
+    <cd:Float>
+      <cd:Description>Position Y</cd:Description>
+      <cd:Unit>km</cd:Unit>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="pos_z">
+    <cd:Float>
+      <cd:Description>Position Z</cd:Description>
+      <cd:Unit>km</cd:Unit>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="vel_x">
+    <cd:Float>
+      <cd:Description>Velocity X</cd:Description>
+      <cd:Unit>km/s</cd:Unit>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="vel_y">
+    <cd:Float>
+      <cd:Description>Velocity Y</cd:Description>
+      <cd:Unit>km/s</cd:Unit>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="vel_z">
+    <cd:Float>
+      <cd:Description>Velocity Z</cd:Description>
+      <cd:Unit>km/s</cd:Unit>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="ls2">
+    <cd:AsciiLineSeparator>
+    </cd:AsciiLineSeparator>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="misp_yaw">
+    <cd:Float>
+      <cd:Description>ATT Combined Effect of AOCS Mispointing (yaw around z)</cd:Description>
+      <cd:Unit>degrees</cd:Unit>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="misp_pitch">
+    <cd:Float>
+      <cd:Description>ATT Combined Effect of AOCS Mispointing (pitch around -z)</cd:Description>
+      <cd:Unit>degrees</cd:Unit>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="misp_roll">
+    <cd:Float>
+      <cd:Description>ATT Combined Effect of AOCS Mispointing (roll around -y)</cd:Description>
+      <cd:Unit>degrees</cd:Unit>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="misp_rate_yaw">
+    <cd:Float>
+      <cd:Description>DATT AOCS Mispointing Rate w.r.t. nominal (yaw around z)</cd:Description>
+      <cd:Unit>degrees/s</cd:Unit>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="misp_rate_pitch">
+    <cd:Float>
+      <cd:Description>DATT AOCS Mispointing Rate w.r.t. nominal (pitch around -x)</cd:Description>
+      <cd:Unit>degrees/s</cd:Unit>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="misp_rate_roll">
+    <cd:Float>
+      <cd:Description>DATT AOCS Mispointing Rate w.r.t. nominal (roll around -y)</cd:Description>
+      <cd:Unit>degrees/s</cd:Unit>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="iatt_att_flag">
+    <cd:Integer>
+      <cd:Description>IATT Attitude Flag (0: Nominal Yaw Steering Mode, 1 and 2: other pointing method)</cd:Description>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="status">
+    <cd:Integer>
+      <cd:Description>Status returned from GOME_INIT (0: nominal, 1 and 2: no convergence; 3, 4, 5: state outside nominal)</cd:Description>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="ls3">
+    <cd:AsciiLineSeparator>
+    </cd:AsciiLineSeparator>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="mjd_crossing">
+    <cd:Float>
+      <cd:Description>Modified Julian Day (MJD50) at True Ascending Node Crossing</cd:Description>
+      <cd:Unit>day</cd:Unit>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="semi_major_axis">
+    <cd:Float>
+      <cd:Description>Semi-major axis</cd:Description>
+      <cd:Unit>km</cd:Unit>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="excentricity">
+    <cd:Float>
+      <cd:Description>Excentricity</cd:Description>
+      <cd:Unit/>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="inclination">
+    <cd:Float>
+      <cd:Description>Inclination</cd:Description>
+      <cd:Unit>degrees</cd:Unit>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="right_asc">
+    <cd:Float>
+      <cd:Description>Right ascension of ascending node</cd:Description>
+      <cd:Unit>degrees</cd:Unit>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="arg_perigee">
+    <cd:Float>
+      <cd:Description>Argument of Perigee</cd:Description>
+      <cd:Unit>degrees</cd:Unit>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="mean_anomaly">
+    <cd:Float>
+      <cd:Description>Mean Anomaly</cd:Description>
+      <cd:Unit>degrees</cd:Unit>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="ws1">
+    <cd:AsciiWhiteSpace>
+    </cd:AsciiWhiteSpace>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="ls4">
+    <cd:AsciiLineSeparator>
+    </cd:AsciiLineSeparator>
+    <cd:Hidden/>
+  </cd:Field>
+</cd:Record>

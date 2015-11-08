@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="SPH2" last-modified="2008-07-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Description>Specific Product Header</cd:Description>
+  <cd:Field name="pir">
+    <cd:NamedType id="PIR"/>
+  </cd:Field>
+  <cd:Field name="sw_version">
+    <cd:Text format="ascii">
+      <cd:Description>GDP Software Version, DOAS Level 1 to 2, (XX.XX)</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="stat_par_version">
+    <cd:Text format="ascii">
+      <cd:Description>GDP Static Parameter File Version. (XX.XX)</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="format_version">
+    <cd:Text format="ascii">
+      <cd:Description>GDP L2 Format Version, (XX.XX)</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="n_win">
+    <cd:Integer>
+      <cd:Description>Number of Fitting Windows</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="win_pair">
+    <cd:Array>
+      <cd:Description>Window Pair (start and end wavelength)</cd:Description>
+      <cd:Dimension><![CDATA[int(../n_win)]]></cd:Dimension>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Float>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="n_mol">
+    <cd:Integer>
+      <cd:Description>Number of Molecules</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="mol_pair">
+    <cd:Array format="ascii">
+      <cd:Description>Molecule Pair (fitting window number and molecule name)</cd:Description>
+      <cd:Dimension><![CDATA[int(../n_mol)]]></cd:Dimension>
+      <cd:Text>
+        <cd:ByteSize>6</cd:ByteSize>
+        <cd:NativeType>string</cd:NativeType>
+      </cd:Text>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="atmosphere_height">
+    <cd:Float>
+      <cd:Description>Atmosphere Height</cd:Description>
+      <cd:Unit>km</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+</cd:Record>

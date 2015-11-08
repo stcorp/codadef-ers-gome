@@ -1,0 +1,528 @@
+<?xml version="1.0"?>
+<cd:ProductDefinition id="GOME_L4" format="ascii" last-modified="2010-08-25" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Record format="ascii">
+  <cd:Field name="space_1">
+    <cd:Text>
+      <cd:Description>space</cd:Description>
+      <cd:FixedValue> </cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="day_title">
+    <cd:Text>
+      <cd:Description>Day: </cd:Description>
+      <cd:FixedValue>Day: </cd:FixedValue>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="day_of_year">
+    <cd:Integer>
+      <cd:Description>Day of the year.</cd:Description>
+      <cd:ByteSize>3</cd:ByteSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="space_2">
+    <cd:Text>
+      <cd:Description>space</cd:Description>
+      <cd:FixedValue> </cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="month">
+    <cd:Text>
+      <cd:Description>Month</cd:Description>
+      <cd:ByteSize>3</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="space_3">
+    <cd:Text>
+      <cd:Description>space</cd:Description>
+      <cd:FixedValue> </cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="day">
+    <cd:Integer>
+      <cd:Description>Day of the month.</cd:Description>
+      <cd:ByteSize>2</cd:ByteSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="space_4">
+    <cd:Text>
+      <cd:Description>comma and space</cd:Description>
+      <cd:FixedValue>, </cd:FixedValue>
+      <cd:ByteSize>2</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="year">
+    <cd:Integer>
+      <cd:Description>Year</cd:Description>
+      <cd:ByteSize>4</cd:ByteSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="space_5">
+    <cd:Text>
+      <cd:Description>space</cd:Description>
+      <cd:FixedValue> </cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="product_type_info">
+    <cd:Text>
+      <cd:Description>Product type information</cd:Description>
+      <cd:FixedValue>Assimilated GOME total O3 (KNMI/ESA)</cd:FixedValue>
+      <cd:ByteSize>36</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="space_6">
+    <cd:Text>
+      <cd:Description>space</cd:Description>
+      <cd:FixedValue> </cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="cycle">
+    <cd:Integer>
+      <cd:Description>Cycle</cd:Description>
+      <cd:ByteSize>7</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="space_7">
+    <cd:Text>
+      <cd:Description>semicolon and space</cd:Description>
+      <cd:FixedValue>; </cd:FixedValue>
+      <cd:ByteSize>2</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="time_info">
+    <cd:Text>
+      <cd:Description>T=12:00</cd:Description>
+      <cd:FixedValue>T=12:00</cd:FixedValue>
+      <cd:ByteSize>7</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="ls_1">
+    <cd:AsciiLineSeparator>
+    </cd:AsciiLineSeparator>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="space_8">
+    <cd:Text>
+      <cd:Description>space</cd:Description>
+      <cd:FixedValue> </cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="longitude_def">
+    <cd:Text>
+      <cd:Description>longitude information</cd:Description>
+      <cd:FixedValue>Longitudes:  288 bins centered on 179.375 W to 179.375 E  (1.25 degree steps)</cd:FixedValue>
+      <cd:ByteSize>77</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="ls_2">
+    <cd:AsciiLineSeparator>
+    </cd:AsciiLineSeparator>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="space_9">
+    <cd:Text>
+      <cd:Description>space</cd:Description>
+      <cd:FixedValue> </cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="latitude_def">
+    <cd:Text>
+      <cd:Description>latitude information</cd:Description>
+      <cd:FixedValue>Latitudes :  180 bins centered on  89.5   S to  89.5   N  (1.00 degree steps)</cd:FixedValue>
+      <cd:ByteSize>77</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="ls_3">
+    <cd:AsciiLineSeparator>
+    </cd:AsciiLineSeparator>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="data">
+    <cd:Array>
+      <cd:Description>data for each latitude row</cd:Description>
+      <cd:Dimension>180</cd:Dimension>
+      <cd:Record>
+        <cd:Description>data for all bins of the same latitude</cd:Description>
+        <cd:Field name="space_1">
+          <cd:Text>
+            <cd:Description>space</cd:Description>
+            <cd:FixedValue> </cd:FixedValue>
+            <cd:ByteSize>1</cd:ByteSize>
+            <cd:NativeType>string</cd:NativeType>
+          </cd:Text>
+          <cd:Hidden/>
+        </cd:Field>
+        <cd:Field name="col_001_025">
+          <cd:Array>
+            <cd:Description>data for bins 1-25 of a row</cd:Description>
+            <cd:Dimension>25</cd:Dimension>
+            <cd:Integer>
+              <cd:Description>Ozone Total Column value</cd:Description>
+              <cd:Unit>DU</cd:Unit>
+              <cd:ByteSize>3</cd:ByteSize>
+              <cd:NativeType>uint16</cd:NativeType>
+            </cd:Integer>
+          </cd:Array>
+        </cd:Field>
+        <cd:Field name="ls_1">
+          <cd:AsciiLineSeparator>
+          </cd:AsciiLineSeparator>
+          <cd:Hidden/>
+        </cd:Field>
+        <cd:Field name="space_2">
+          <cd:Text>
+            <cd:Description>space</cd:Description>
+            <cd:FixedValue> </cd:FixedValue>
+            <cd:ByteSize>1</cd:ByteSize>
+            <cd:NativeType>string</cd:NativeType>
+          </cd:Text>
+          <cd:Hidden/>
+        </cd:Field>
+        <cd:Field name="col_026_050">
+          <cd:Array>
+            <cd:Description>data for bins 26-50 of a row</cd:Description>
+            <cd:Dimension>25</cd:Dimension>
+            <cd:Integer>
+              <cd:Description>Ozone Total Column value</cd:Description>
+              <cd:Unit>DU</cd:Unit>
+              <cd:ByteSize>3</cd:ByteSize>
+              <cd:NativeType>uint16</cd:NativeType>
+            </cd:Integer>
+          </cd:Array>
+        </cd:Field>
+        <cd:Field name="ls_2">
+          <cd:AsciiLineSeparator>
+          </cd:AsciiLineSeparator>
+          <cd:Hidden/>
+        </cd:Field>
+        <cd:Field name="space_3">
+          <cd:Text>
+            <cd:Description>space</cd:Description>
+            <cd:FixedValue> </cd:FixedValue>
+            <cd:ByteSize>1</cd:ByteSize>
+            <cd:NativeType>string</cd:NativeType>
+          </cd:Text>
+          <cd:Hidden/>
+        </cd:Field>
+        <cd:Field name="col_051_075">
+          <cd:Array>
+            <cd:Description>data for bins 51-75 of a row</cd:Description>
+            <cd:Dimension>25</cd:Dimension>
+            <cd:Integer>
+              <cd:Description>Ozone Total Column value</cd:Description>
+              <cd:Unit>DU</cd:Unit>
+              <cd:ByteSize>3</cd:ByteSize>
+              <cd:NativeType>uint16</cd:NativeType>
+            </cd:Integer>
+          </cd:Array>
+        </cd:Field>
+        <cd:Field name="ls_3">
+          <cd:AsciiLineSeparator>
+          </cd:AsciiLineSeparator>
+          <cd:Hidden/>
+        </cd:Field>
+        <cd:Field name="space_4">
+          <cd:Text>
+            <cd:Description>space</cd:Description>
+            <cd:FixedValue> </cd:FixedValue>
+            <cd:ByteSize>1</cd:ByteSize>
+            <cd:NativeType>string</cd:NativeType>
+          </cd:Text>
+          <cd:Hidden/>
+        </cd:Field>
+        <cd:Field name="col_076_100">
+          <cd:Array>
+            <cd:Description>data for bins 76-100 of a row</cd:Description>
+            <cd:Dimension>25</cd:Dimension>
+            <cd:Integer>
+              <cd:Description>Ozone Total Column value</cd:Description>
+              <cd:Unit>DU</cd:Unit>
+              <cd:ByteSize>3</cd:ByteSize>
+              <cd:NativeType>uint16</cd:NativeType>
+            </cd:Integer>
+          </cd:Array>
+        </cd:Field>
+        <cd:Field name="ls_4">
+          <cd:AsciiLineSeparator>
+          </cd:AsciiLineSeparator>
+          <cd:Hidden/>
+        </cd:Field>
+        <cd:Field name="space_5">
+          <cd:Text>
+            <cd:Description>space</cd:Description>
+            <cd:FixedValue> </cd:FixedValue>
+            <cd:ByteSize>1</cd:ByteSize>
+            <cd:NativeType>string</cd:NativeType>
+          </cd:Text>
+          <cd:Hidden/>
+        </cd:Field>
+        <cd:Field name="col_101_125">
+          <cd:Array>
+            <cd:Description>data for bins 101-125 of a row</cd:Description>
+            <cd:Dimension>25</cd:Dimension>
+            <cd:Integer>
+              <cd:Description>Ozone Total Column value</cd:Description>
+              <cd:Unit>DU</cd:Unit>
+              <cd:ByteSize>3</cd:ByteSize>
+              <cd:NativeType>uint16</cd:NativeType>
+            </cd:Integer>
+          </cd:Array>
+        </cd:Field>
+        <cd:Field name="ls_5">
+          <cd:AsciiLineSeparator>
+          </cd:AsciiLineSeparator>
+          <cd:Hidden/>
+        </cd:Field>
+        <cd:Field name="space_6">
+          <cd:Text>
+            <cd:Description>space</cd:Description>
+            <cd:FixedValue> </cd:FixedValue>
+            <cd:ByteSize>1</cd:ByteSize>
+            <cd:NativeType>string</cd:NativeType>
+          </cd:Text>
+          <cd:Hidden/>
+        </cd:Field>
+        <cd:Field name="col_126_150">
+          <cd:Array>
+            <cd:Description>data for bins 126-150 of a row</cd:Description>
+            <cd:Dimension>25</cd:Dimension>
+            <cd:Integer>
+              <cd:Description>Ozone Total Column value</cd:Description>
+              <cd:Unit>DU</cd:Unit>
+              <cd:ByteSize>3</cd:ByteSize>
+              <cd:NativeType>uint16</cd:NativeType>
+            </cd:Integer>
+          </cd:Array>
+        </cd:Field>
+        <cd:Field name="ls_6">
+          <cd:AsciiLineSeparator>
+          </cd:AsciiLineSeparator>
+          <cd:Hidden/>
+        </cd:Field>
+        <cd:Field name="space_7">
+          <cd:Text>
+            <cd:Description>space</cd:Description>
+            <cd:FixedValue> </cd:FixedValue>
+            <cd:ByteSize>1</cd:ByteSize>
+            <cd:NativeType>string</cd:NativeType>
+          </cd:Text>
+          <cd:Hidden/>
+        </cd:Field>
+        <cd:Field name="col_151_175">
+          <cd:Array>
+            <cd:Description>data for bins 151-175 of a row</cd:Description>
+            <cd:Dimension>25</cd:Dimension>
+            <cd:Integer>
+              <cd:Description>Ozone Total Column value</cd:Description>
+              <cd:Unit>DU</cd:Unit>
+              <cd:ByteSize>3</cd:ByteSize>
+              <cd:NativeType>uint16</cd:NativeType>
+            </cd:Integer>
+          </cd:Array>
+        </cd:Field>
+        <cd:Field name="ls_7">
+          <cd:AsciiLineSeparator>
+          </cd:AsciiLineSeparator>
+          <cd:Hidden/>
+        </cd:Field>
+        <cd:Field name="space_8">
+          <cd:Text>
+            <cd:Description>space</cd:Description>
+            <cd:FixedValue> </cd:FixedValue>
+            <cd:ByteSize>1</cd:ByteSize>
+            <cd:NativeType>string</cd:NativeType>
+          </cd:Text>
+          <cd:Hidden/>
+        </cd:Field>
+        <cd:Field name="col_176_200">
+          <cd:Array>
+            <cd:Description>data for bins 176-200 of a row</cd:Description>
+            <cd:Dimension>25</cd:Dimension>
+            <cd:Integer>
+              <cd:Description>Ozone Total Column value</cd:Description>
+              <cd:Unit>DU</cd:Unit>
+              <cd:ByteSize>3</cd:ByteSize>
+              <cd:NativeType>uint16</cd:NativeType>
+            </cd:Integer>
+          </cd:Array>
+        </cd:Field>
+        <cd:Field name="ls_8">
+          <cd:AsciiLineSeparator>
+          </cd:AsciiLineSeparator>
+          <cd:Hidden/>
+        </cd:Field>
+        <cd:Field name="space_9">
+          <cd:Text>
+            <cd:Description>space</cd:Description>
+            <cd:FixedValue> </cd:FixedValue>
+            <cd:ByteSize>1</cd:ByteSize>
+            <cd:NativeType>string</cd:NativeType>
+          </cd:Text>
+          <cd:Hidden/>
+        </cd:Field>
+        <cd:Field name="col_201_225">
+          <cd:Array>
+            <cd:Description>data for bins 201-225 of a row</cd:Description>
+            <cd:Dimension>25</cd:Dimension>
+            <cd:Integer>
+              <cd:Description>Ozone Total Column value</cd:Description>
+              <cd:Unit>DU</cd:Unit>
+              <cd:ByteSize>3</cd:ByteSize>
+              <cd:NativeType>uint16</cd:NativeType>
+            </cd:Integer>
+          </cd:Array>
+        </cd:Field>
+        <cd:Field name="ls_9">
+          <cd:AsciiLineSeparator>
+          </cd:AsciiLineSeparator>
+          <cd:Hidden/>
+        </cd:Field>
+        <cd:Field name="space_10">
+          <cd:Text>
+            <cd:Description>space</cd:Description>
+            <cd:FixedValue> </cd:FixedValue>
+            <cd:ByteSize>1</cd:ByteSize>
+            <cd:NativeType>string</cd:NativeType>
+          </cd:Text>
+          <cd:Hidden/>
+        </cd:Field>
+        <cd:Field name="col_226_250">
+          <cd:Array>
+            <cd:Description>data for bins 226-250 of a row</cd:Description>
+            <cd:Dimension>25</cd:Dimension>
+            <cd:Integer>
+              <cd:Description>Ozone Total Column value</cd:Description>
+              <cd:Unit>DU</cd:Unit>
+              <cd:ByteSize>3</cd:ByteSize>
+              <cd:NativeType>uint16</cd:NativeType>
+            </cd:Integer>
+          </cd:Array>
+        </cd:Field>
+        <cd:Field name="ls_10">
+          <cd:AsciiLineSeparator>
+          </cd:AsciiLineSeparator>
+          <cd:Hidden/>
+        </cd:Field>
+        <cd:Field name="space_11">
+          <cd:Text>
+            <cd:Description>space</cd:Description>
+            <cd:FixedValue> </cd:FixedValue>
+            <cd:ByteSize>1</cd:ByteSize>
+            <cd:NativeType>string</cd:NativeType>
+          </cd:Text>
+          <cd:Hidden/>
+        </cd:Field>
+        <cd:Field name="col_251_275">
+          <cd:Array>
+            <cd:Description>data for bins 251-275 of a row</cd:Description>
+            <cd:Dimension>25</cd:Dimension>
+            <cd:Integer>
+              <cd:Description>Ozone Total Column value</cd:Description>
+              <cd:Unit>DU</cd:Unit>
+              <cd:ByteSize>3</cd:ByteSize>
+              <cd:NativeType>uint16</cd:NativeType>
+            </cd:Integer>
+          </cd:Array>
+        </cd:Field>
+        <cd:Field name="ls_11">
+          <cd:AsciiLineSeparator>
+          </cd:AsciiLineSeparator>
+          <cd:Hidden/>
+        </cd:Field>
+        <cd:Field name="space_12">
+          <cd:Text>
+            <cd:Description>space</cd:Description>
+            <cd:FixedValue> </cd:FixedValue>
+            <cd:ByteSize>1</cd:ByteSize>
+            <cd:NativeType>string</cd:NativeType>
+          </cd:Text>
+          <cd:Hidden/>
+        </cd:Field>
+        <cd:Field name="col_276_288">
+          <cd:Array>
+            <cd:Description>data for bins 276-288 of a row</cd:Description>
+            <cd:Dimension>13</cd:Dimension>
+            <cd:Integer>
+              <cd:Description>Ozone Total Column value</cd:Description>
+              <cd:Unit>DU</cd:Unit>
+              <cd:ByteSize>3</cd:ByteSize>
+              <cd:NativeType>uint16</cd:NativeType>
+            </cd:Integer>
+          </cd:Array>
+        </cd:Field>
+        <cd:Field name="space_13">
+          <cd:Text>
+            <cd:Description>space</cd:Description>
+            <cd:FixedValue>   </cd:FixedValue>
+            <cd:ByteSize>3</cd:ByteSize>
+            <cd:NativeType>string</cd:NativeType>
+          </cd:Text>
+          <cd:Hidden/>
+        </cd:Field>
+        <cd:Field name="latitude_title">
+          <cd:Text>
+            <cd:Description>lat =  </cd:Description>
+            <cd:FixedValue>lat =  </cd:FixedValue>
+            <cd:ByteSize>7</cd:ByteSize>
+            <cd:NativeType>string</cd:NativeType>
+          </cd:Text>
+          <cd:Hidden/>
+        </cd:Field>
+        <cd:Field name="latitude">
+          <cd:Float>
+            <cd:Description>center latitude for this row</cd:Description>
+            <cd:Unit>degrees_north</cd:Unit>
+            <cd:ByteSize>5</cd:ByteSize>
+            <cd:NativeType>float</cd:NativeType>
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="ls_12">
+          <cd:AsciiLineSeparator>
+          </cd:AsciiLineSeparator>
+          <cd:Hidden/>
+        </cd:Field>
+      </cd:Record>
+    </cd:Array>
+  </cd:Field>
+</cd:Record>
+</cd:ProductDefinition>

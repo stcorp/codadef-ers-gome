@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<cd:ProductDefinition id="GOME_L2_v2" format="binary" last-modified="2008-07-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Record format="binary">
+    <cd:Field name="pir">
+      <cd:NamedType id="PIR"/>
+    </cd:Field>
+    <cd:Field name="fsr">
+      <cd:NamedType id="FSR2"/>
+    </cd:Field>
+    <cd:Field name="sph">
+      <cd:NamedType id="SPH2"/>
+    </cd:Field>
+    <cd:Field name="ddr">
+      <cd:Array>
+        <cd:Description>DOAS Data Records</cd:Description>
+        <cd:Dimension><![CDATA[int(/fsr/n_ddr)]]></cd:Dimension>
+        <cd:NamedType id="DDR_v2"/>
+      </cd:Array>
+    </cd:Field>
+  </cd:Record>
+</cd:ProductDefinition>

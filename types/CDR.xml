@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<cd:Record format="ascii" name="CDR" last-modified="2008-07-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Field name="channel_id">
+    <cd:Text>
+      <cd:Description>Channel Identifier</cd:Description>
+      <cd:ByteSize>10</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="wavelen_range_start">
+    <cd:Float>
+      <cd:Description>Wavelength Range (start)</cd:Description>
+      <cd:Unit>nm</cd:Unit>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="wavelen_range_end">
+    <cd:Float>
+      <cd:Description>Wavelength Range (end)</cd:Description>
+      <cd:Unit>nm</cd:Unit>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="num_samples">
+    <cd:Integer>
+      <cd:Description>Number of Detector Samples</cd:Description>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spectral_calibration_error">
+    <cd:Float>
+      <cd:Description>Spectral Calibration Error</cd:Description>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="spectral_check">
+    <cd:Integer>
+      <cd:Description>Spectral Check (0: e &lt; 0.02px; 1: 0.02px &lt; e &lt; 0.05px; 2: e &gt; 0.05px)</cd:Description>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="sat_pixels">
+    <cd:Integer>
+      <cd:Description>Saturated Pixels</cd:Description>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="hot_pixels">
+    <cd:Integer>
+      <cd:Description>Hot Pixels</cd:Description>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="dead_pixels">
+    <cd:Integer>
+      <cd:Description>Dead Pixels</cd:Description>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="ls1">
+    <cd:AsciiLineSeparator>
+    </cd:AsciiLineSeparator>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="sdr">
+    <cd:Array>
+      <cd:Description>Solar Data Record</cd:Description>
+      <cd:Dimension><![CDATA[int(../num_samples)]]></cd:Dimension>
+      <cd:NamedType id="SDR"/>
+    </cd:Array>
+  </cd:Field>
+</cd:Record>

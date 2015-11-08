@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<cd:Record format="ascii" name="EGP_v1" last-modified="2008-07-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Field name="gr_pix_id">
+    <cd:Text>
+      <cd:Description>Ground Pixel Number</cd:Description>
+      <cd:ByteSize>18</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="num_band">
+    <cd:Integer>
+      <cd:Description>num_band</cd:Description>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="sub_counter">
+    <cd:Integer>
+      <cd:Description>Subset Counter (0 to 2 forward, 3 backward)</cd:Description>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="ls1">
+    <cd:AsciiLineSeparator>
+    </cd:AsciiLineSeparator>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="agi">
+    <cd:NamedType id="AGI_v1"/>
+  </cd:Field>
+  <cd:Field name="pdr">
+    <cd:Array>
+      <cd:Description>PMD data values of the corresponding data science packet</cd:Description>
+      <cd:Dimension><![CDATA[$egp_pdr_available]]></cd:Dimension>
+      <cd:NamedType id="PDR"/>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="brda">
+    <cd:Array>
+      <cd:Description>Band Data Records</cd:Description>
+      <cd:Dimension><![CDATA[int(../num_band)]]></cd:Dimension>
+      <cd:NamedType id="BRDA"/>
+    </cd:Array>
+  </cd:Field>
+</cd:Record>

@@ -1,0 +1,230 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="FSR1" last-modified="2008-08-13" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Description>File Structure Record</cd:Description>
+  <cd:Field name="n_sp1">
+    <cd:Integer>
+      <cd:Description>Number of SPH1 records (always 1)</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="len_sp1">
+    <cd:Integer>
+      <cd:Description>Length of SPH1 record</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="n_fcd">
+    <cd:Integer>
+      <cd:Description>Number of FCD records (always 1)</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="len_fcd">
+    <cd:Integer>
+      <cd:Description>Length of FCD record</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="n_rec">
+    <cd:Integer>
+      <cd:Description>Number of PCD records</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="len_rec">
+    <cd:Integer>
+      <cd:Description>Length of PCD record</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="n_sun">
+    <cd:Integer>
+      <cd:Description>Number of SCD records</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="len_sun">
+    <cd:Integer>
+      <cd:Description>Length of SCD record</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="n_moon">
+    <cd:Integer>
+      <cd:Description>Number of MCD records</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="len_moon">
+    <cd:Integer>
+      <cd:Description>Length of MCD record</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spare_sh">
+    <cd:Integer>
+      <cd:Description>Spare Short</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="spare_lon">
+    <cd:Integer>
+      <cd:Description>Spare Long</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="n_b1a">
+    <cd:Integer>
+      <cd:Description>Number of Band 1a data records</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="len_b1a">
+    <cd:Integer>
+      <cd:Description>Length of Band 1a data record</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="n_b1b">
+    <cd:Integer>
+      <cd:Description>Number of Band 1b data records</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="len_b1b">
+    <cd:Integer>
+      <cd:Description>Length of Band 1b data record</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="n_b2a">
+    <cd:Integer>
+      <cd:Description>Number of Band 2a data records</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="len_b2a">
+    <cd:Integer>
+      <cd:Description>Length of Band 2a data record</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="n_b2b">
+    <cd:Integer>
+      <cd:Description>Number of Band 2b data records</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="len_b2b">
+    <cd:Integer>
+      <cd:Description>Length of Band 2b data record</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="n_b3">
+    <cd:Integer>
+      <cd:Description>Number of Band 3 data records</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="len_b3">
+    <cd:Integer>
+      <cd:Description>Length of Band 3 data record</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="n_b4">
+    <cd:Integer>
+      <cd:Description>Number of Band 4 data records</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="len_b4">
+    <cd:Integer>
+      <cd:Description>Length of Band 4 data record</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="n_blp">
+    <cd:Integer>
+      <cd:Description>Number of Blind Pixel records</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="len_blp">
+    <cd:Integer>
+      <cd:Description>Length of Blind Pixel record</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="n_st1a">
+    <cd:Integer>
+      <cd:Description>Number of Straylight 1a data records</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="len_st1a">
+    <cd:Integer>
+      <cd:Description>Length of Straylight 1a data record</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="n_st1b">
+    <cd:Integer>
+      <cd:Description>Number of Straylight 1b data records</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="len_st1b">
+    <cd:Integer>
+      <cd:Description>Length of Straylight 1b data record</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="n_st2a">
+    <cd:Integer>
+      <cd:Description>Number of Straylight 2a data records</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="len_st2a">
+    <cd:Integer>
+      <cd:Description>Length of Straylight 2a data record</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+</cd:Record>

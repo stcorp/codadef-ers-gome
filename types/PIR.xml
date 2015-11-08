@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<cd:Record format="ascii" name="PIR" last-modified="2008-07-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Description>Product Identifier Record</cd:Description>
+  <cd:Field name="mission_id">
+    <cd:Text>
+      <cd:Description>Satellite/Mission Identifier</cd:Description>
+      <cd:ByteSize>2</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="sensor_id">
+    <cd:Text>
+      <cd:Description>Sensor Identifier</cd:Description>
+      <cd:ByteSize>3</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="start_orbit">
+    <cd:Integer>
+      <cd:Description>Start Orbit Number</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="n_orbits">
+    <cd:Integer>
+      <cd:Description>Number of Processed Orbits</cd:Description>
+      <cd:ByteSize>4</cd:ByteSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="acq_facil">
+    <cd:Text>
+      <cd:Description>Acquisition Facility Identifier (if more than one station, this field is 'DP')</cd:Description>
+      <cd:ByteSize>2</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="prod_type">
+    <cd:Text>
+      <cd:Description>Product Type</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="ws1">
+    <cd:Text>
+      <cd:FixedValue> </cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="proc_facil">
+    <cd:Text>
+      <cd:Description>Processing Facility Identifier</cd:Description>
+      <cd:ByteSize>2</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="proc_date">
+    <cd:Text>
+      <cd:Description>Processing Date</cd:Description>
+      <cd:ByteSize>8</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="proc_time">
+    <cd:Text>
+      <cd:Description>Processing Time</cd:Description>
+      <cd:ByteSize>6</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+  </cd:Field>
+</cd:Record>

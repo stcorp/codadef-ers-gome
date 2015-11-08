@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<cd:Record format="ascii" name="DDRA_v1" last-modified="2008-07-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Field name="glr">
+    <cd:NamedType id="GLR2A"/>
+  </cd:Field>
+  <cd:Field name="total_column_ozone">
+    <cd:Float>
+      <cd:Description>Total Column of Ozone</cd:Description>
+      <cd:Unit>DU</cd:Unit>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="ls1">
+    <cd:AsciiLineSeparator>
+    </cd:AsciiLineSeparator>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="relative_error_on_total_column_ozone">
+    <cd:Float>
+      <cd:Description>Relative error on Total Column</cd:Description>
+      <cd:Unit>%</cd:Unit>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="ls2">
+    <cd:AsciiLineSeparator>
+    </cd:AsciiLineSeparator>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="irr">
+    <cd:NamedType id="IRRA_v1"/>
+  </cd:Field>
+</cd:Record>

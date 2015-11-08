@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<cd:Record format="ascii" name="SMMD" last-modified="2008-07-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Field name="measurement_num">
+    <cd:Text>
+      <cd:Description>Measurement Number</cd:Description>
+      <cd:ByteSize>22</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="num_band">
+    <cd:Integer>
+      <cd:Description>num_band</cd:Description>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="ls1">
+    <cd:AsciiLineSeparator>
+    </cd:AsciiLineSeparator>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="smgi">
+    <cd:NamedType id="SMGI"/>
+  </cd:Field>
+  <cd:Field name="pdr">
+    <cd:NamedType id="PDR"/>
+  </cd:Field>
+  <cd:Field name="brda">
+    <cd:Array>
+      <cd:Description>Band Data Records (ASCII)</cd:Description>
+      <cd:Dimension><![CDATA[int(../num_band)]]></cd:Dimension>
+      <cd:NamedType id="BRDA"/>
+    </cd:Array>
+  </cd:Field>
+</cd:Record>

@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<cd:Record format="ascii" name="SFS" last-modified="2008-07-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Description>Solar Format Specification</cd:Description>
+  <cd:Field name="description">
+    <cd:Text>
+      <cd:Description>Description</cd:Description>
+      <cd:FixedValue>Solar Spectrum </cd:FixedValue>
+      <cd:ByteSize>15</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="utc_solar_spectrum">
+    <cd:Time timeformat="ascii_gome_datetime">
+      <cd:Description>UTC Date and Time of Solar Spectrum</cd:Description>
+      <cd:Mapping string="                        " value="nan"/>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="ls1">
+    <cd:AsciiLineSeparator>
+    </cd:AsciiLineSeparator>
+    <cd:Hidden/>
+  </cd:Field>
+</cd:Record>

@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<cd:Record format="ascii" name="BRDA" last-modified="2008-07-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Field name="band_id">
+    <cd:Text>
+      <cd:Description>Band Identifier</cd:Description>
+      <cd:ByteSize><![CDATA[if(bytes(., 7) == "Band 1a", 7, if(bytes(., 7) == "Band 1b", 7, if(bytes(., 7) == "Band 2a", 7, if(bytes(., 7) == "Band 2b", 7, if(bytes(., 6) == "Band 3", 6, if(bytes(., 6) == "Band 4", 6, if(bytes(., 8) == "Blind 1a", 8, if(bytes(., 13) == "Straylight 1a", 13, if(bytes(., 13) == "Straylight 1b", 13, if(bytes(., 13) == "Straylight 2a", 13, -1))))))))))]]></cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="integration_time">
+    <cd:Float>
+      <cd:Description>Integration Time</cd:Description>
+      <cd:Unit>s</cd:Unit>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="wavelength_lo">
+    <cd:Float>
+      <cd:Description>WaveLength Range (Low)</cd:Description>
+      <cd:Unit>nm</cd:Unit>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="wavelength_high">
+    <cd:Float>
+      <cd:Description>WaveLength Range (High)</cd:Description>
+      <cd:Unit>nm</cd:Unit>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="num_samples">
+    <cd:Integer>
+      <cd:Description>Number of Detector Pixels Samples</cd:Description>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spect_err">
+    <cd:Float>
+      <cd:Description>Spectral Calibration Error</cd:Description>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="spectral_check">
+    <cd:Integer>
+      <cd:Description>Spectral Check</cd:Description>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_sat_pix">
+    <cd:Integer>
+      <cd:Description>Saturated Pixels</cd:Description>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_hot_pix">
+    <cd:Integer>
+      <cd:Description>Hot Pixels</cd:Description>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_dead_pix">
+    <cd:Integer>
+      <cd:Description>Dead Pixels</cd:Description>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="refl_jump">
+    <cd:Integer>
+      <cd:Description>Reflectivity Jump</cd:Description>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="ls1">
+    <cd:AsciiLineSeparator>
+    </cd:AsciiLineSeparator>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="edr">
+    <cd:Array>
+      <cd:Description>Earthshine Data Records</cd:Description>
+      <cd:Dimension><![CDATA[int(../num_samples)]]></cd:Dimension>
+      <cd:NamedType id="EDR"/>
+    </cd:Array>
+  </cd:Field>
+</cd:Record>

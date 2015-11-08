@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="BCR" last-modified="2008-07-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Field name="dectn">
+    <cd:Integer>
+      <cd:Description>Detector Array Number (1-4)</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="start_band">
+    <cd:Integer>
+      <cd:Description>Start Detector band (0-1023)</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="end_band">
+    <cd:Integer>
+      <cd:Description>End Detector band (0-1023)</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+</cd:Record>

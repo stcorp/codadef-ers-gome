@@ -1,0 +1,119 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="GLR2" last-modified="2008-07-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Description>Geolocation Record</cd:Description>
+  <cd:Field name="pix_nr">
+    <cd:Integer>
+      <cd:Description>Ground Pixel Number</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="subset_counter">
+    <cd:Integer>
+      <cd:Description>Subset Counter (0, 1, 2, or 3)</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="datetime">
+    <cd:Time timeformat="binary_gome_datetime">
+      <cd:Description>Date, time of the ground pixel at end of integration time</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="sza">
+    <cd:Array>
+      <cd:Description>3 Solar Zenith Angles at Satellite for the points {A', B', C'}</cd:Description>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Float>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="line_sight">
+    <cd:Array>
+      <cd:Description>3 Line-of-Sight Angles at Satellite for the points {A', B', C'}</cd:Description>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Float>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="rel_azi">
+    <cd:Array>
+      <cd:Description>3 Relative Azimuth Angles at Satellite for the points {A', B', C'}</cd:Description>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Float>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="sza_toa">
+    <cd:Array>
+      <cd:Description>3 Solar Zenith Angles at TOA (Top-Of-Atmosphere) for the points {A', B',C'}</cd:Description>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Float>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="line_sight_toa">
+    <cd:Array>
+      <cd:Description>3 Line-of-Sight Angles at TOA (Top-Of-Atmosphere) for the points {A', B', C'}</cd:Description>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Float>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="rel_azi_toa">
+    <cd:Array>
+      <cd:Description>3 Relative Azimuth Angles at TOA (Top-Of-Atmosphere) for the points {A', B', C'}</cd:Description>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Float>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="sat_geodetic_height">
+    <cd:Float>
+      <cd:Description>Satellite Geodetic Height at point {B'}</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="earth_radius_curvature">
+    <cd:Float>
+      <cd:Description>Earth Radius of Curvature at point {B'}</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="corners">
+    <cd:Array>
+      <cd:Description>4 Corner and Center Coordinates (Latitude and Longitude) at points {1',2',3',4',5'} of Ground Pixel</cd:Description>
+      <cd:Dimension>5</cd:Dimension>
+      <cd:Record>
+        <cd:Field name="lat">
+          <cd:Float>
+            <cd:Description>Latitude</cd:Description>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>float</cd:NativeType>
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="lon">
+          <cd:Float>
+            <cd:Description>Longitude</cd:Description>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>float</cd:NativeType>
+          </cd:Float>
+        </cd:Field>
+      </cd:Record>
+    </cd:Array>
+  </cd:Field>
+</cd:Record>

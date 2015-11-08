@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+<cd:Record format="ascii" name="ACI_v2" last-modified="2009-02-17" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Field name="description">
+    <cd:Text>
+      <cd:Description>Description (OCRA/ROCINN Cloud Information)</cd:Description>
+      <cd:ByteSize>29</cd:ByteSize>
+      <cd:FixedValue>OCRA/ROCINN Cloud Information</cd:FixedValue>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="mode">
+    <cd:Integer>
+      <cd:Description>Mode (normal: 0, snow-ice: 1)</cd:Description>
+      <cd:ByteSize>2</cd:ByteSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="ls1">
+    <cd:AsciiLineSeparator/>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="cloud_frac">
+    <cd:Float>
+      <cd:Description>CloudFraction</cd:Description>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="cloud_frac_error">
+    <cd:Float>
+      <cd:Description>CloudFraction error</cd:Description>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="albedo">
+    <cd:Float>
+      <cd:Description>Cloud-Topalbedo</cd:Description>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="albedo_error">
+    <cd:Float>
+      <cd:Description>Cloud-Topalbedo error</cd:Description>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="height">
+    <cd:Float>
+      <cd:Description>Cloud-Topheight</cd:Description>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="height_error">
+    <cd:Float>
+      <cd:Description>Cloud-Topheight error</cd:Description>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="ls2">
+    <cd:AsciiLineSeparator/>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="thickness">
+    <cd:Float>
+      <cd:Description>Cloudopticalthickness</cd:Description>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="thickness_error">
+    <cd:Float>
+      <cd:Description>Cloudopticalthickness error</cd:Description>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="pressure">
+    <cd:Float>
+      <cd:Description>Cloud-Toppressure</cd:Description>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="pressure_error">
+    <cd:Float>
+      <cd:Description>Cloud-Toppressure error</cd:Description>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="type">
+    <cd:Integer>
+      <cd:Description>Cloudtype (Cirrus: 1, Cirrostratus: 2, Deep convection: 3, Altocumulus: 4, Altostratus: 5, Nimbostratus: 6, Cumulus: 7, Stratocumulus: 8, Stratus: 9)</cd:Description>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="ls3">
+    <cd:AsciiLineSeparator/>
+    <cd:Hidden/>
+  </cd:Field>
+</cd:Record>

@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<cd:Record format="ascii" name="SMGI" last-modified="2008-07-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Description>Sun/Moon Geolocation Information</cd:Description>
+  <cd:Field name="measurement_end">
+    <cd:Time timeformat="ascii_gome_datetime">
+      <cd:Description>UTC Date/Time of Measurement End</cd:Description>
+      <cd:Mapping string="                        " value="nan"/>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="ls1">
+    <cd:AsciiLineSeparator>
+    </cd:AsciiLineSeparator>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="solar_angles">
+    <cd:Record>
+      <cd:Description>Solar Zenith and Azimuth Angles at Satellite w.r.t. North</cd:Description>
+      <cd:Field name="zenith">
+        <cd:Float>
+          <cd:Description>Zenith Angle</cd:Description>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="azimuth">
+        <cd:Float>
+          <cd:Description>azimuth Angle</cd:Description>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="ls1">
+        <cd:AsciiLineSeparator>
+        </cd:AsciiLineSeparator>
+        <cd:Hidden/>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="bsdf_angles">
+    <cd:Record>
+      <cd:Description>BSDF/Moon Zenith and Azimuth Angles at Satellite w.r.t. North</cd:Description>
+      <cd:Field name="zenith">
+        <cd:Float>
+          <cd:Description>Zenith Angle</cd:Description>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="azimuth">
+        <cd:Float>
+          <cd:Description>azimuth Angle</cd:Description>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="ls1">
+        <cd:AsciiLineSeparator>
+        </cd:AsciiLineSeparator>
+        <cd:Hidden/>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="flag">
+    <cd:Float>
+      <cd:Description>Flag indicating if the record was used in the calculation of the Sun Reference Spectrum (0=no; 1=yes, ' ' = not applicable; or Illuminated Fraction of the Moon's Disk.</cd:Description>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="ls2">
+    <cd:AsciiLineSeparator>
+    </cd:AsciiLineSeparator>
+    <cd:Hidden/>
+  </cd:Field>
+</cd:Record>

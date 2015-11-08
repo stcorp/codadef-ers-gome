@@ -1,0 +1,119 @@
+<?xml version="1.0"?>
+<cd:ProductClass name="ERS_GOME" last-modified="2011-09-20" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Description>ERS-2 GOME products</cd:Description>
+  <cd:ProductType name="GOM.LVL13">
+    <cd:Description>GOME Level-1 Data (binary)</cd:Description>
+    <cd:ProductDefinition id="GOME_L1_v1" format="binary" version="1">
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">E2GOM</cd:MatchData>
+        <cd:MatchData offset="16">LVL10</cd:MatchData>
+        <cd:MatchData offset="134">\000\000</cd:MatchData>
+        <cd:MatchData offset="146">\000\001</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">E2GOM</cd:MatchData>
+        <cd:MatchData offset="16">LVL10</cd:MatchData>
+        <cd:MatchData offset="134">\000\001</cd:MatchData>
+        <cd:MatchData offset="184">\000\001</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">E2GOM</cd:MatchData>
+        <cd:MatchData offset="16">LVL10</cd:MatchData>
+        <cd:MatchData offset="134">\000\002</cd:MatchData>
+        <cd:MatchData offset="222">\000\001</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">E2GOM</cd:MatchData>
+        <cd:MatchData offset="16">LVL10</cd:MatchData>
+        <cd:MatchData offset="134">\000\003</cd:MatchData>
+        <cd:MatchData offset="260">\000\001</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+    <cd:ProductDefinition id="GOME_L1_v2" format="binary" version="2">
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">E2GOM</cd:MatchData>
+        <cd:MatchData offset="16">LVL10</cd:MatchData>
+        <cd:MatchData offset="134">\000\000</cd:MatchData>
+        <cd:MatchData offset="146">\000\002</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">E2GOM</cd:MatchData>
+        <cd:MatchData offset="16">LVL10</cd:MatchData>
+        <cd:MatchData offset="134">\000\001</cd:MatchData>
+        <cd:MatchData offset="184">\000\002</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">E2GOM</cd:MatchData>
+        <cd:MatchData offset="16">LVL10</cd:MatchData>
+        <cd:MatchData offset="134">\000\002</cd:MatchData>
+        <cd:MatchData offset="222">\000\002</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">E2GOM</cd:MatchData>
+        <cd:MatchData offset="16">LVL10</cd:MatchData>
+        <cd:MatchData offset="134">\000\003</cd:MatchData>
+        <cd:MatchData offset="260">\000\002</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+  <cd:ProductType name="GOM.LVL13_EXTRACTED">
+    <cd:Description>GOME Level-1 Extracted Spectra (ASCII)</cd:Description>
+    <cd:ProductDefinition id="GOME_L1_EXTRACTED_v1" format="ascii" version="1">
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">/*</cd:MatchData>
+        <cd:MatchData> GDP Level 0-to-1 Extracting</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+    <cd:ProductDefinition id="GOME_L1_EXTRACTED_v2" format="ascii" version="2">
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">/*</cd:MatchData>
+        <cd:MatchData> GDP Level 0-to-1 Extracting</cd:MatchData>
+        <cd:MatchData>* Product Format Version 2 *</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+  <cd:ProductType name="GOM.LVL21">
+    <cd:Description>GOME Level-2 Data (binary)</cd:Description>
+    <cd:ProductDefinition id="GOME_L2_v1" format="binary" version="1">
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">E2GOM</cd:MatchData>
+        <cd:MatchData offset="16">TCDO3</cd:MatchData>
+        <cd:MatchData offset="98">01.10</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+    <cd:ProductDefinition id="GOME_L2_v2" format="binary" version="2">
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">E2GOM</cd:MatchData>
+        <cd:MatchData offset="16">LVL20</cd:MatchData>
+        <cd:MatchData offset="98">02.00</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+  <cd:ProductType name="GOM.LVL21_EXTRACTED">
+    <cd:Description>GOME Level-2 Extracted Spectra (ASCII)</cd:Description>
+    <cd:ProductDefinition id="GOME_L2_EXTRACTED_v1" format="ascii" version="1">
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">/*</cd:MatchData>
+        <cd:MatchData> GDP Level 1 to 2 Extracting</cd:MatchData>
+        <cd:MatchData>TCDO3</cd:MatchData>
+        <cd:MatchData> 01.10</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+    <cd:ProductDefinition id="GOME_L2_EXTRACTED_v2" format="ascii" version="2">
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">/*</cd:MatchData>
+        <cd:MatchData> GDP Level 1 to 2 Extracting</cd:MatchData>
+        <cd:MatchData>LVL20</cd:MatchData>
+        <cd:MatchData> 02.00</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+  <cd:ProductType name="GOME_L4">
+    <cd:Description>GOME Fast Delivery Service assimilated total ozone maps: Level 4</cd:Description>
+    <cd:ProductDefinition id="GOME_L4" format="ascii" version="0">
+      <cd:DetectionRule>
+        <cd:MatchData offset="23">Assimilated GOME total O3 (KNMI/ESA)</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+</cd:ProductClass>

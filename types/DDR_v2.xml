@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="DDR_v2" last-modified="2008-07-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Field name="glr">
+    <cd:NamedType id="GLR2"/>
+  </cd:Field>
+  <cd:Field name="tot_ozone">
+    <cd:Float>
+      <cd:Description>Total Column of Ozone</cd:Description>
+      <cd:Unit>DU</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="err_ozone">
+    <cd:Float>
+      <cd:Description>Relative error on the Total Column</cd:Description>
+      <cd:Unit>%</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="irr">
+    <cd:NamedType id="IRR_v2"/>
+  </cd:Field>
+</cd:Record>

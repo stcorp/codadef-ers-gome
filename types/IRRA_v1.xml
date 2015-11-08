@@ -1,0 +1,447 @@
+<?xml version="1.0"?>
+<cd:Record format="ascii" name="IRRA_v1" last-modified="2010-08-25" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Description>Intermediate Results Record in ASCII</cd:Description>
+  <cd:Field name="vcd">
+    <cd:Record>
+      <cd:Description>VCD (Vertical Column Density) data</cd:Description>
+      <cd:Field name="total">
+        <cd:Array>
+          <cd:Description>Total VCD to ground</cd:Description>
+          <cd:Dimension><![CDATA[int(/sph/n_mol)]]></cd:Dimension>
+          <cd:Float>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Array>
+      </cd:Field>
+      <cd:Field name="ws1">
+        <cd:AsciiWhiteSpace>
+        </cd:AsciiWhiteSpace>
+        <cd:Hidden/>
+      </cd:Field>
+      <cd:Field name="ls1">
+        <cd:AsciiLineSeparator>
+        </cd:AsciiLineSeparator>
+        <cd:Hidden/>
+      </cd:Field>
+      <cd:Field name="error">
+        <cd:Array>
+          <cd:Description>Errors on VCDs above</cd:Description>
+          <cd:Dimension><![CDATA[int(/sph/n_mol)]]></cd:Dimension>
+          <cd:Float>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Array>
+      </cd:Field>
+      <cd:Field name="ws2">
+        <cd:AsciiWhiteSpace>
+        </cd:AsciiWhiteSpace>
+        <cd:Hidden/>
+      </cd:Field>
+      <cd:Field name="ls2">
+        <cd:AsciiLineSeparator>
+        </cd:AsciiLineSeparator>
+        <cd:Hidden/>
+      </cd:Field>
+      <cd:Field name="flag">
+        <cd:Integer>
+          <cd:Description>Flag indexing output</cd:Description>
+          <cd:NativeType>int32</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="ls3">
+        <cd:AsciiLineSeparator>
+        </cd:AsciiLineSeparator>
+        <cd:Hidden/>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="doas">
+    <cd:Record>
+      <cd:Description>DOAS data</cd:Description>
+      <cd:Field name="slant">
+        <cd:Array>
+          <cd:Description>Slant Columns</cd:Description>
+          <cd:Dimension><![CDATA[int(/sph/n_mol)]]></cd:Dimension>
+          <cd:Float>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Array>
+      </cd:Field>
+      <cd:Field name="ws1">
+        <cd:AsciiWhiteSpace>
+        </cd:AsciiWhiteSpace>
+        <cd:Hidden/>
+      </cd:Field>
+      <cd:Field name="ls1">
+        <cd:AsciiLineSeparator>
+        </cd:AsciiLineSeparator>
+        <cd:Hidden/>
+      </cd:Field>
+      <cd:Field name="error">
+        <cd:Array>
+          <cd:Description>Errors on Slant Columns</cd:Description>
+          <cd:Dimension><![CDATA[int(/sph/n_mol)]]></cd:Dimension>
+          <cd:Float>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Array>
+      </cd:Field>
+      <cd:Field name="ws2">
+        <cd:AsciiWhiteSpace>
+        </cd:AsciiWhiteSpace>
+        <cd:Hidden/>
+      </cd:Field>
+      <cd:Field name="ls2">
+        <cd:AsciiLineSeparator>
+        </cd:AsciiLineSeparator>
+        <cd:Hidden/>
+      </cd:Field>
+      <cd:Field name="stats">
+        <cd:Array>
+          <cd:Description>RMS, Chi^2, Goodness-of-Fit, Iteration Number</cd:Description>
+          <cd:Dimension><![CDATA[int(/sph/n_win)]]></cd:Dimension>
+          <cd:Record>
+            <cd:Field name="rms">
+              <cd:Float>
+                <cd:Description>RMS</cd:Description>
+                <cd:NativeType>double</cd:NativeType>
+              </cd:Float>
+            </cd:Field>
+            <cd:Field name="chi2">
+              <cd:Float>
+                <cd:Description>Chi^2</cd:Description>
+                <cd:NativeType>double</cd:NativeType>
+              </cd:Float>
+            </cd:Field>
+            <cd:Field name="gf">
+              <cd:Float>
+                <cd:Description>Goodness-of-Fit</cd:Description>
+                <cd:NativeType>double</cd:NativeType>
+              </cd:Float>
+            </cd:Field>
+            <cd:Field name="iter">
+              <cd:Float>
+                <cd:Description>Iteration Number</cd:Description>
+                <cd:NativeType>double</cd:NativeType>
+              </cd:Float>
+            </cd:Field>
+            <cd:Field name="ws1">
+              <cd:AsciiWhiteSpace>
+              </cd:AsciiWhiteSpace>
+              <cd:Hidden/>
+            </cd:Field>
+            <cd:Field name="ls1">
+              <cd:AsciiLineSeparator>
+              </cd:AsciiLineSeparator>
+              <cd:Hidden/>
+            </cd:Field>
+          </cd:Record>
+        </cd:Array>
+      </cd:Field>
+      <cd:Field name="flag">
+        <cd:Integer>
+          <cd:Description>Flag indexing output</cd:Description>
+          <cd:NativeType>int32</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="ls3">
+        <cd:AsciiLineSeparator>
+        </cd:AsciiLineSeparator>
+        <cd:Hidden/>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="amf">
+    <cd:Record>
+      <cd:Description>AMF (Air Mass Factor) data</cd:Description>
+      <cd:Field name="ground">
+        <cd:Array>
+          <cd:Description>AMF to ground for species</cd:Description>
+          <cd:Dimension><![CDATA[int(/sph/n_mol)]]></cd:Dimension>
+          <cd:Float>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Array>
+      </cd:Field>
+      <cd:Field name="ws1">
+        <cd:AsciiWhiteSpace>
+        </cd:AsciiWhiteSpace>
+        <cd:Hidden/>
+      </cd:Field>
+      <cd:Field name="ls1">
+        <cd:AsciiLineSeparator>
+        </cd:AsciiLineSeparator>
+        <cd:Hidden/>
+      </cd:Field>
+      <cd:Field name="cld_top">
+        <cd:Array>
+          <cd:Description>AMF to cloud-top for species</cd:Description>
+          <cd:Dimension><![CDATA[int(/sph/n_mol)]]></cd:Dimension>
+          <cd:Float>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Array>
+      </cd:Field>
+      <cd:Field name="ws2">
+        <cd:AsciiWhiteSpace>
+        </cd:AsciiWhiteSpace>
+        <cd:Hidden/>
+      </cd:Field>
+      <cd:Field name="ls2">
+        <cd:AsciiLineSeparator>
+        </cd:AsciiLineSeparator>
+        <cd:Hidden/>
+      </cd:Field>
+      <cd:Field name="int_ground">
+        <cd:Array>
+          <cd:Description>Total intensities for ground for fitting windows</cd:Description>
+          <cd:Dimension><![CDATA[int(/sph/n_win)]]></cd:Dimension>
+          <cd:Float>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Array>
+      </cd:Field>
+      <cd:Field name="ws3">
+        <cd:AsciiWhiteSpace>
+        </cd:AsciiWhiteSpace>
+        <cd:Hidden/>
+      </cd:Field>
+      <cd:Field name="ls3">
+        <cd:AsciiLineSeparator>
+        </cd:AsciiLineSeparator>
+        <cd:Hidden/>
+      </cd:Field>
+      <cd:Field name="int_cld_top">
+        <cd:Array>
+          <cd:Description>Total intensities for cloud-top for fitting windows</cd:Description>
+          <cd:Dimension><![CDATA[int(/sph/n_win)]]></cd:Dimension>
+          <cd:Float>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Array>
+      </cd:Field>
+      <cd:Field name="ws4">
+        <cd:AsciiWhiteSpace>
+        </cd:AsciiWhiteSpace>
+        <cd:Hidden/>
+      </cd:Field>
+      <cd:Field name="ls4">
+        <cd:AsciiLineSeparator>
+        </cd:AsciiLineSeparator>
+        <cd:Hidden/>
+      </cd:Field>
+      <cd:Field name="int_measured">
+        <cd:Array>
+          <cd:Description>Measured intensity for fitting windows</cd:Description>
+          <cd:Dimension><![CDATA[int(/sph/n_win)]]></cd:Dimension>
+          <cd:Float>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Array>
+      </cd:Field>
+      <cd:Field name="ws5">
+        <cd:AsciiWhiteSpace>
+        </cd:AsciiWhiteSpace>
+        <cd:Hidden/>
+      </cd:Field>
+      <cd:Field name="ls5">
+        <cd:AsciiLineSeparator>
+        </cd:AsciiLineSeparator>
+        <cd:Hidden/>
+      </cd:Field>
+      <cd:Field name="flag">
+        <cd:Integer>
+          <cd:Description>Flag indexing output</cd:Description>
+          <cd:NativeType>int32</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="ls6">
+        <cd:AsciiLineSeparator>
+        </cd:AsciiLineSeparator>
+        <cd:Hidden/>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="icfa">
+    <cd:Record>
+      <cd:Description>ICFA data</cd:Description>
+      <cd:Field name="frac">
+        <cd:Float>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="press">
+        <cd:Float>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="ws1">
+        <cd:AsciiWhiteSpace>
+        </cd:AsciiWhiteSpace>
+        <cd:Hidden/>
+      </cd:Field>
+      <cd:Field name="ls1">
+        <cd:AsciiLineSeparator>
+        </cd:AsciiLineSeparator>
+        <cd:Hidden/>
+      </cd:Field>
+      <cd:Field name="err_frac">
+        <cd:Float>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="err_press">
+        <cd:Float>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="ws2">
+        <cd:AsciiWhiteSpace>
+        </cd:AsciiWhiteSpace>
+        <cd:Hidden/>
+      </cd:Field>
+      <cd:Field name="ls2">
+        <cd:AsciiLineSeparator>
+        </cd:AsciiLineSeparator>
+        <cd:Hidden/>
+      </cd:Field>
+      <cd:Field name="surf_press">
+        <cd:Float>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="ws3">
+        <cd:AsciiWhiteSpace>
+        </cd:AsciiWhiteSpace>
+        <cd:Hidden/>
+      </cd:Field>
+      <cd:Field name="ls3">
+        <cd:AsciiLineSeparator>
+        </cd:AsciiLineSeparator>
+        <cd:Hidden/>
+      </cd:Field>
+      <cd:Field name="cca">
+        <cd:Record>
+          <cd:Description>ICFA/CCA data</cd:Description>
+          <cd:Field name="cld_frac">
+            <cd:Float>
+              <cd:Description>Cloud Fraction</cd:Description>
+              <cd:Unit/>
+              <cd:NativeType>double</cd:NativeType>
+            </cd:Float>
+          </cd:Field>
+          <cd:Field name="ws1">
+            <cd:AsciiWhiteSpace>
+            </cd:AsciiWhiteSpace>
+            <cd:Hidden/>
+          </cd:Field>
+          <cd:Field name="subpixel_trace">
+            <cd:Array>
+              <cd:Description>16 CCA Subpixel Trace</cd:Description>
+              <cd:Dimension>16</cd:Dimension>
+              <cd:Text>
+                <cd:ByteSize>1</cd:ByteSize>
+                <cd:NativeType>char</cd:NativeType>
+              </cd:Text>
+            </cd:Array>
+          </cd:Field>
+        </cd:Record>
+      </cd:Field>
+      <cd:Field name="ls4">
+        <cd:AsciiLineSeparator>
+        </cd:AsciiLineSeparator>
+        <cd:Hidden/>
+      </cd:Field>
+      <cd:Field name="flag">
+        <cd:Integer>
+          <cd:Description>Flag indexing output</cd:Description>
+          <cd:NativeType>int32</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="ls5">
+        <cd:AsciiLineSeparator>
+        </cd:AsciiLineSeparator>
+        <cd:Hidden/>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="stats">
+    <cd:Record>
+      <cd:Description>Statistics</cd:Description>
+      <cd:Field name="pix_contrast">
+        <cd:Array>
+          <cd:Description>Pixel contrast (3 PMDS: mean and standard deviation)</cd:Description>
+          <cd:Dimension>2</cd:Dimension>
+          <cd:Dimension>3</cd:Dimension>
+          <cd:Float>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Array>
+      </cd:Field>
+      <cd:Field name="ws1">
+        <cd:AsciiWhiteSpace>
+        </cd:AsciiWhiteSpace>
+        <cd:Hidden/>
+      </cd:Field>
+      <cd:Field name="ls1">
+        <cd:AsciiLineSeparator>
+        </cd:AsciiLineSeparator>
+        <cd:Hidden/>
+      </cd:Field>
+      <cd:Field name="pix_colour">
+        <cd:Array>
+          <cd:Description>Pixel colour (sub-pixel values)</cd:Description>
+          <cd:Dimension>4</cd:Dimension>
+          <cd:Record>
+            <cd:Field name="band">
+              <cd:Array>
+                <cd:Description>Pixel colour for a single band</cd:Description>
+                <cd:Dimension>4</cd:Dimension>
+                <cd:Float>
+                  <cd:NativeType>double</cd:NativeType>
+                </cd:Float>
+              </cd:Array>
+            </cd:Field>
+            <cd:Field name="ws1">
+              <cd:AsciiWhiteSpace>
+              </cd:AsciiWhiteSpace>
+              <cd:Hidden/>
+            </cd:Field>
+            <cd:Field name="ls1">
+              <cd:AsciiLineSeparator>
+              </cd:AsciiLineSeparator>
+              <cd:Hidden/>
+            </cd:Field>
+          </cd:Record>
+        </cd:Array>
+      </cd:Field>
+      <cd:Field name="pix_col_grad">
+        <cd:Float>
+          <cd:Description>Pixel colour gradient</cd:Description>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="ws2">
+        <cd:AsciiWhiteSpace>
+        </cd:AsciiWhiteSpace>
+        <cd:Hidden/>
+      </cd:Field>
+      <cd:Field name="ls2">
+        <cd:AsciiLineSeparator>
+        </cd:AsciiLineSeparator>
+        <cd:Hidden/>
+      </cd:Field>
+      <cd:Field name="flag">
+        <cd:Integer>
+          <cd:Description>Flag indexing output</cd:Description>
+          <cd:NativeType>int32</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="ls3">
+        <cd:AsciiLineSeparator>
+        </cd:AsciiLineSeparator>
+        <cd:Hidden/>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+</cd:Record>
