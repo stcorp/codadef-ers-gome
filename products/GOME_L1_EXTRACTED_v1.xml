@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition id="GOME_L1_EXTRACTED_v1" format="ascii" last-modified="2008-07-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+<cd:ProductDefinition id="GOME_L1_EXTRACTED_v1" format="ascii" last-modified="2015-11-26" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
   <cd:Record format="ascii">
     <cd:Field name="gsi">
       <cd:NamedType id="GSI1_v1"/>
@@ -56,19 +56,19 @@
     </cd:Field>
   </cd:Record>
   <cd:ProductVariable name="pir_available">
-    <cd:Init><![CDATA[$pir_available = if((bytes(/pir, 5) == "E2GOM"), 1, 0)]]></cd:Init>
+    <cd:Init><![CDATA[$pir_available = 1; $pir_available = if((bytes(/pir, 5) == "E2GOM"), 1, 0)]]></cd:Init>
   </cd:ProductVariable>
   <cd:ProductVariable name="ersi_available">
-    <cd:Init><![CDATA[$ersi_available = if((bytes(/ersi, 15) == "ERS Information"), 1, 0)]]></cd:Init>
+    <cd:Init><![CDATA[$ersi_available = 1; $ersi_available = if((bytes(/ersi, 15) == "ERS Information"), 1, 0)]]></cd:Init>
   </cd:ProductVariable>
   <cd:ProductVariable name="sfs_cdr_available">
-    <cd:Init><![CDATA[$sfs_cdr_available = if((bytes(/sfs, 14) == "Solar Spectrum"), 1, 0)]]></cd:Init>
+    <cd:Init><![CDATA[$sfs_cdr_available = 1; $sfs_cdr_available = if((bytes(/sfs, 14) == "Solar Spectrum"), 1, 0)]]></cd:Init>
   </cd:ProductVariable>
   <cd:ProductVariable name="efs_egp_available">
-    <cd:Init><![CDATA[$efs_egp_available = if((bytes(/efs, 19) == "Earthshine Spectrum"), 1, 0)]]></cd:Init>
+    <cd:Init><![CDATA[$efs_egp_available = 1; $efs_egp_available = if((bytes(/efs, 19) == "Earthshine Spectrum"), 1, 0)]]></cd:Init>
   </cd:ProductVariable>
   <cd:ProductVariable name="smfs_smmd_available">
-    <cd:Init><![CDATA[$smfs_smmd_available = if((bytes(/efs, 17) == "Sunshine Spectrum" || bytes(/efs, 18) == "Moonshine Spectrum"), 1, 0)]]></cd:Init>
+    <cd:Init><![CDATA[$smfs_smmd_available = 1; $smfs_smmd_available = if((bytes(/efs, 17) == "Sunshine Spectrum" || bytes(/efs, 18) == "Moonshine Spectrum"), 1, 0)]]></cd:Init>
   </cd:ProductVariable>
   <cd:ProductVariable name="num_egp">
     <cd:Init><![CDATA[$num_egp = int(/efs/num_ground)]]></cd:Init>
@@ -77,6 +77,6 @@
     <cd:Init><![CDATA[$num_smmd = int(/smfs/num_measurements)]]></cd:Init>
   </cd:ProductVariable>
   <cd:ProductVariable name="egp_pdr_available">
-    <cd:Init><![CDATA[$egp_pdr_available = if((bytes(/egp[0]/pdr, 3) == "PMD"), 1, 0)]]></cd:Init>
+    <cd:Init><![CDATA[$egp_pdr_available = 1; $egp_pdr_available = if((bytes(/egp[0]/pdr, 3) == "PMD"), 1, 0)]]></cd:Init>
   </cd:ProductVariable>
 </cd:ProductDefinition>
